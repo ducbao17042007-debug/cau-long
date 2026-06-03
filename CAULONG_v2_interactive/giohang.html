@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Giỏ hàng - VNB Sports</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffba20",
+                    "on-tertiary-fixed": "#1b1b1c",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e5e2e3",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#c6c4c5",
+                    "on-tertiary-fixed-variant": "#474647",
+                    "on-tertiary-container": "#525152",
+                    "tertiary": "#5f5e5f",
+                    "surface-container": "#edeeef",
+                    "on-secondary-container": "#003370",
+                    "inverse-primary": "#ffba20",
+                    "surface-tint": "#7c5800",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#514532",
+                    "secondary-container": "#659dfe",
+                    "primary-fixed": "#ffdea8",
+                    "on-primary-container": "#6b4c00",
+                    "primary-container": "#ffb800",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary-fixed": "#001a40",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline": "#837560",
+                    "outline-variant": "#d5c4ab",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#004491",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#c8c6c7",
+                    "on-background": "#191c1d",
+                    "background": "#f8f9fa",
+                    "surface-variant": "#e1e3e4",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary": "#115cb9",
+                    "primary": "#7c5800",
+                    "secondary-fixed-dim": "#acc7ff",
+                    "secondary-fixed": "#d7e2ff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "title-md": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Shell -->
+<!-- ===== VNB HEADER (shared) ===== -->
+<header id="vnb-header">
+  <div id="vnb-topbar">
+    <div id="vnb-topbar-inner">
+      <div class="vnb-topbar-left">
+        <span><span class="material-symbols-outlined" style="font-size:14px">mail</span> info@vnbsports.vn</span>
+        <span><span class="material-symbols-outlined" style="font-size:14px">phone</span> 1900 633 633</span>
+      </div>
+      <div class="vnb-topbar-right">
+        <span>Hệ thống 50+ cửa hàng</span>
+        <span>Vietnam</span>
+      </div>
+    </div>
+  </div>
+  <div id="vnb-navbar">
+    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <ul id="vnb-navlinks">
+<li><a href="gioithieu.html">Giới thiệu</a></li>
+<li><a href="sanpham.html">Sản phẩm</a></li>
+<li><a href="daotao.html">Đào tạo</a></li>
+<li><a href="khuyenmai.html">Khuyến mãi</a></li>
+<li><a href="tintuc.html">Tin tức</a></li>
+<li><a href="tuyendung.html">Tuyển dụng</a></li>
+    </ul>
+    <div id="vnb-actions">
+      <div class="vnb-search-box">
+        <input type="text" placeholder="Tìm kiếm..."/>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <a href="giohang.html" class="vnb-icon-btn" title="Giỏ hàng">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vnb-cart-badge">3</span>
+      </a>
+      <a href="hoso.html" class="vnb-icon-btn" title="Tài khoản">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <button class="vnb-hamburger" id="vnb-ham-btn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="vnb-mobile-menu">
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="sanpham.html">Sản phẩm</a>
+<a href="daotao.html">Đào tạo</a>
+<a href="khuyenmai.html">Khuyến mãi</a>
+<a href="tintuc.html">Tin tức</a>
+<a href="tuyendung.html">Tuyển dụng</a>
+  </nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg min-h-[716px]">
+<!-- Breadcrumbs -->
+<nav class="mb-stack-lg flex items-center gap-2 text-label-sm text-on-surface-variant">
+  <a class="hover:text-primary transition-colors" href="gioithieu.html">Trang chủ</a>
+  <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+  <a class="hover:text-primary transition-colors" href="sanpham.html">Sản phẩm</a>
+  <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+  <span class="text-on-surface font-bold">Giỏ hàng</span>
+</nav>
+
+<div class="flex items-center justify-between mb-6">
+  <h1 class="font-headline-lg text-headline-lg">Giỏ hàng của bạn</h1>
+  <button onclick="if(confirm('Xóa tất cả sản phẩm khỏi giỏ hàng?')){ VNB.clearCart(); document.getElementById('vnb-cart-root').dispatchEvent(new Event('rerender')); window.location.reload(); }"
+    class="text-sm text-error/70 hover:text-error flex items-center gap-1 transition-colors">
+    <span class="material-symbols-outlined text-base">delete_sweep</span> Xóa tất cả
+  </button>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+  <!-- Dynamic Cart Items -->
+  <div class="lg:col-span-8 space-y-4" id="vnb-cart-root">
+    <div class="flex items-center justify-center py-16">
+      <div class="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  </div>
+
+  <!-- Order Summary (right) -->
+  <aside class="lg:col-span-4 sticky top-28" id="vnb-order-summary">
+  </aside>
+</div>
+</main>
+<!-- Footer Component -->
+<!-- ===== VNB FOOTER (shared) ===== -->
+<footer id="vnb-footer">
+  <div class="vnb-footer-inner">
+    <div class="vnb-footer-grid">
+      <!-- Brand -->
+      <div class="vnb-footer-brand">
+        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
+        <div class="vnb-footer-socials">
+          <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a href="#" title="YouTube"><span class="material-symbols-outlined">smart_display</span></a>
+          <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+      <!-- Sản phẩm -->
+      <div class="vnb-footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="sanpham.html"><span class="dot"></span>Vợt cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Giày cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Phụ kiện &amp; Dụng cụ</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
+        </ul>
+      </div>
+      <!-- Khách hàng -->
+      <div class="vnb-footer-col">
+        <h4>Khách hàng</h4>
+        <ul>
+          <li><a href="gioithieu.html"><span class="dot"></span>Về VNB Sports</a></li>
+          <li><a href="khuyenmai.html"><span class="dot"></span>Khuyến mãi</a></li>
+          <li><a href="daotao.html"><span class="dot"></span>Đào tạo</a></li>
+          <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <!-- Liên hệ -->
+      <div class="vnb-footer-col vnb-footer-contact">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone_in_talk</span>
+            <div><strong>1900 633 633</strong>Hỗ trợ từ 8:00 – 21:00</div>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@vnbsports.vn</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">pin_drop</span>
+            <span>Tòa nhà VNB, Phường 10, Quận 10, TP.HCM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vnb-footer-bottom">
+      <p>© 2024 VNB Sports. All Rights Reserved.</p>
+      <div class="vnb-footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Mobile Navigation Shell (Suppressed on Desktop) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.05)] grid grid-cols-4 py-2 px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="text-[10px] font-bold">Danh mục</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[8px] w-3 h-3 rounded-full flex items-center justify-center font-bold">2</span>
+</div>
+<span class="text-[10px] font-bold">Giỏ hàng</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Tài khoản</span>
+</a>
+</div>
+<script>
+        // Micro-interactions for quantity buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Simplified feedback logic
+                if (this.innerText === '+' || this.innerText === '-') {
+                    const span = this.parentElement.querySelector('span');
+                    let val = parseInt(span.innerText);
+                    if (this.innerText === '+') val++;
+                    else if (val > 1) val--;
+                    span.innerText = val;
+                }
+            });
+        });
+    </script>
+<script>
+// === VNB Shared JS ===
+(function(){
+  // Hamburger toggle
+  var btn = document.getElementById('vnb-ham-btn');
+  var menu = document.getElementById('vnb-mobile-menu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  }
+  // Sticky shrink
+  var hdr = document.getElementById('vnb-header');
+  if(hdr){
+    window.addEventListener('scroll', function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .vnb-reveal').forEach(function(el){
+    el.classList.add('vnb-reveal');
+    obs.observe(el);
+  });
+})();
+</script>
+<script src="cart.js"></script>
+</body></html>

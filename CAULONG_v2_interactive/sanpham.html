@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VNB Sports - Badminton Rackets Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#edeeef",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary": "#115cb9",
+                    "on-secondary-fixed-variant": "#004491",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#ffba20",
+                    "surface-tint": "#7c5800",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c7",
+                    "tertiary-container": "#c6c4c5",
+                    "on-surface": "#191c1d",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-fixed": "#ffdea8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#001a40",
+                    "background": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed": "#271900",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#474647",
+                    "on-background": "#191c1d",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-surface-variant": "#514532",
+                    "tertiary-fixed": "#e5e2e3",
+                    "outline-variant": "#d5c4ab",
+                    "on-tertiary-container": "#525152",
+                    "secondary-fixed": "#d7e2ff",
+                    "secondary-container": "#659dfe",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#6b4c00",
+                    "on-tertiary-fixed": "#1b1b1c",
+                    "tertiary": "#5f5e5f",
+                    "surface-variant": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#acc7ff",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "on-secondary-container": "#003370",
+                    "primary-container": "#ffb800",
+                    "outline": "#837560",
+                    "primary": "#7c5800"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "48px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "title-md": ["Be Vietnam Pro"],
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopBar Tiers -->
+<!-- ===== VNB HEADER (shared) ===== -->
+<header id="vnb-header">
+  <div id="vnb-topbar">
+    <div id="vnb-topbar-inner">
+      <div class="vnb-topbar-left">
+        <span><span class="material-symbols-outlined" style="font-size:14px">mail</span> info@vnbsports.vn</span>
+        <span><span class="material-symbols-outlined" style="font-size:14px">phone</span> 1900 633 633</span>
+      </div>
+      <div class="vnb-topbar-right">
+        <span>Hệ thống 50+ cửa hàng</span>
+        <span>Vietnam</span>
+      </div>
+    </div>
+  </div>
+  <div id="vnb-navbar">
+    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <ul id="vnb-navlinks">
+<li><a href="gioithieu.html">Giới thiệu</a></li>
+<li><a href="sanpham.html" class="active">Sản phẩm</a></li>
+<li><a href="daotao.html">Đào tạo</a></li>
+<li><a href="khuyenmai.html">Khuyến mãi</a></li>
+<li><a href="tintuc.html">Tin tức</a></li>
+<li><a href="tuyendung.html">Tuyển dụng</a></li>
+    </ul>
+    <div id="vnb-actions">
+      <div class="vnb-search-box">
+        <input type="text" placeholder="Tìm kiếm..."/>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <a href="giohang.html" class="vnb-icon-btn" title="Giỏ hàng">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vnb-cart-badge">3</span>
+      </a>
+      <a href="hoso.html" class="vnb-icon-btn" title="Tài khoản">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <button data-product-id="yonex-100zz" class="vnb-hamburger" id="vnb-ham-btn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="vnb-mobile-menu">
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="sanpham.html" class="active">Sản phẩm</a>
+<a href="daotao.html">Đào tạo</a>
+<a href="khuyenmai.html">Khuyến mãi</a>
+<a href="tintuc.html">Tin tức</a>
+<a href="tuyendung.html">Tuyển dụng</a>
+  </nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-72 flex-shrink-0">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md sticky top-10">
+<div class="flex items-center justify-between mb-stack-lg">
+<h2 class="font-title-md text-title-md text-on-surface">Bộ lọc</h2>
+<span class="material-symbols-outlined text-primary">tune</span>
+</div>
+<!-- Brand Filter -->
+<div class="mb-stack-lg">
+<h3 class="font-label-md text-label-md mb-stack-sm text-on-surface-variant uppercase tracking-wider">Thương hiệu</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Yonex</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Victor</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Lining</span>
+</label>
+</div>
+</div>
+<!-- Stiffness Filter -->
+<div class="mb-stack-lg border-t border-outline-variant pt-stack-md">
+<h3 class="font-label-md text-label-md mb-stack-sm text-on-surface-variant uppercase tracking-wider">Độ cứng</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" name="stiffness" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Dẻo</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" name="stiffness" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Trung bình</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" name="stiffness" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Cứng</span>
+</label>
+</div>
+</div>
+<!-- Weight Filter -->
+<div class="mb-stack-lg border-t border-outline-variant pt-stack-md">
+<h3 class="font-label-md text-label-md mb-stack-sm text-on-surface-variant uppercase tracking-wider">Trọng lượng</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 border border-outline-variant rounded-lg font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">2U</button>
+<button class="px-3 py-2 border-2 border-primary text-primary bg-primary-fixed rounded-lg font-label-sm text-label-sm font-bold">3U</button>
+<button class="px-3 py-2 border border-outline-variant rounded-lg font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">4U</button>
+<button class="px-3 py-2 border border-outline-variant rounded-lg font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">5U</button>
+</div>
+</div>
+<!-- Price Range -->
+<div class="mb-stack-lg border-t border-outline-variant pt-stack-md">
+<h3 class="font-label-md text-label-md mb-stack-sm text-on-surface-variant uppercase tracking-wider">Giá (VNĐ)</h3>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-full appearance-none cursor-pointer" max="10000000" min="0" type="range"/>
+<div class="flex justify-between font-label-sm text-label-sm mt-3 text-on-surface">
+<span class="font-bold">0đ</span>
+<span class="font-bold">10.000.000đ</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold uppercase tracking-widest text-label-md hover:bg-on-primary-fixed-variant shadow-md hover:shadow-lg transition-all transform active:scale-95">Áp dụng lọc</button>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-grow">
+<!-- Grid Header -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-4 border-b border-outline-variant pb-4">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Vợt Cầu Lông Cao Cấp <span class="text-primary font-body-md align-middle ml-2">(124 sản phẩm)</span></h1>
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Sắp xếp:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border border-outline-variant rounded-lg text-label-md px-6 py-2.5 pr-10 focus:ring-primary focus:border-primary cursor-pointer">
+<option>Mới nhất</option>
+<option>Giá từ thấp đến cao</option>
+<option>Giá từ cao đến thấp</option>
+<option>Bán chạy nhất</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Main Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product 1: Yonex New -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Yonex Astrox 100ZZ" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQylzUNwbjTyPePq3sLS2RlUFCP90ydg8DECUs1rWICeJ2oZmnQBMSu_kqKh2FpYoozaLgZ75d2sVo7k6R3T-EGaIQ9GhD66yGC-oluLT6JXJnKWHFvY-HoxFPMw9GyHwauU32J9_7-tXuwMUeULbC66oUB7MvqmmHHFT5axVtdzqFPCSobAnw5zG3ZUnBksvpwPU-zepZuujTjyYOSFtCh99hxT5nCrzjCIWGOA299H3M-_0WSHdytwBv_pMX_0Z42N_dh97Mibc"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter">New Arrival</span>
+<span class="bg-error text-on-error px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter shadow-sm">Hot</span>
+</div>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Yonex</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Astrox 100ZZ Kurenai (Matte Navy/Orange)</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">4.150.000đ</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+<!-- Product 2: Victor Sale -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Victor Thruster" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLF221Bv4NnKN3_jpzcT3lrJGzyC7eIJ8-dUMPQ6hqv0PWhs8Ph6iUmtmEZzodRgMAsWYaIgzI5WDQMkvOpCdEF1I6y57sx8c0kCNXbjJj6BfknnRVH6cEExqFyUmefxsMVIzKN6NLuhAA8ovyZjuhhwVzj_h6Vtl_u4ghEo30UBTxIViIRFonYi9HrnXVSypeg8_fDV6JujzT7JtKDreHP8UsjYw1LlLzrDwUi0klahg_lecifAU-Jj3DDDy47lDJfFMeOieRulM"/>
+<span class="absolute top-4 left-4 bg-error text-on-error px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter shadow-sm">-15% OFF</span>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Victor</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Thruster F Claw White Edition</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">3.250.000đ</span>
+<span class="text-on-surface-variant line-through text-label-sm opacity-60">3.820.000đ</span>
+</div>
+</div>
+<button data-product-id="victor-thf" class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+<!-- Product 3: Lining -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Lining Tectonic" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA20gSMtEc58QJ49_PTjITVGc9qOq0iRq1ujJjHGgXONWyCAlNrsB6az9oEFOXW3kWPu3TiCzfaeOshPKC_gwNFI1xkYM91oMe4sfiqmArOJ6loDTc8ToKao0fbCsOkqb8rN-ImNp_kK5pOtWe_wqoYkksHd62t3PjUxfwOc35UQq5nebFJ6OZGl_JYI8AxTgJVmquXMf3zLhAEGo3SexFUqxf2SKwveZaQXcN78h2FsrY9PVDqOP9G8EPyu-koP-saa098qR33q5g"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter">Premium</span>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Lining</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Tectonic 9 Premium Black/Gold</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">4.800.000đ</span>
+</div>
+</div>
+<button data-product-id="lining-n9" class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+<!-- Product 4: Yonex -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Yonex Nanoflare" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZTC3RrEBHyCYjZLgWoBPsS2sgvWNaYZI373NhhanL6hAjkPFkqwzn-fPGG66KUyYCgwWN84NegQzqs4lYwcHG-g0WGFxcqKi2W6N9hvB9HvJGFDF_bQce-Si3CR3wScpeS11zNVwUuM8vdncfPq3HcPwrJnjSUvIUVyLPmp0fWyo9yKAx7qaL8Kx7_qKjiId6-rOhBF11BfQJheH-dDD75WFNfHzZAF1IXzDx5_zaFu6Mr93M5SCzgQpBBDvySQ19taoQSYlaIM"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter">Fast Speed</span>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Yonex</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Nanoflare 800 Game Light Lime</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">2.750.000đ</span>
+</div>
+</div>
+<button data-product-id="yonex-nf800" class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+<!-- Product 5: Victor -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Victor Auraspeed" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSqvrVHdmZYGBwkkwz7wH8CzA24U_LcxOPFrs58GgepCHP-M6KyEIJJBRQKhrWY0IsJ_t9hAvRv-41yJ_UJPcYr1EaRLZQFlzoPN9TZZ9r4dASp9TPpUVNMWoSAk2elF-oZA9zuAqSPiWlQ1yFaeTA2k_xhmGbXCDpiqaTVk8o6AKvfz8-8_dzvC3dn7dbyjzdWk8YtpptXjI2KiOgiv6poxhkTzBekdiyRDkVUdkVmuaXFBJtMRDwAbqOAS5nHl9258Ylw6Yz8zg"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter">New</span>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Victor</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Auraspeed 100X H Silver/Purple</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">3.950.000đ</span>
+</div>
+</div>
+<button data-product-id="victor-p9200" class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+<!-- Product 6: Lining Sale -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+<div class="relative h-72 bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+<img alt="Lining Bladex" class="h-full object-contain group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLF221Bv4NnKN3_jpzcT3lrJGzyC7eIJ8-dUMPQ6hqv0PWhs8Ph6iUmtmEZzodRgMAsWYaIgzI5WDQMkvOpCdEF1I6y57sx8c0kCNXbjJj6BfknnRVH6cEExqFyUmefxsMVIzKN6NLuhAA8ovyZjuhhwVzj_h6Vtl_u4ghEo30UBTxIViIRFonYi9HrnXVSypeg8_fDV6JujzT7JtKDreHP8UsjYw1LlLzrDwUi0klahg_lecifAU-Jj3DDDy47lDJfFMeOieRulM"/>
+<span class="absolute top-4 left-4 bg-error text-on-error px-3 py-1 font-bold text-[10px] rounded uppercase tracking-tighter shadow-sm">-20%</span>
+</div>
+<div class="p-stack-md flex flex-col h-full">
+<div class="flex-grow">
+<p class="text-primary font-bold text-[11px] uppercase tracking-[0.2em] mb-1">Lining</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors line-clamp-2">Bladex 800 Pink Special Edition</h3>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-primary font-headline-lg text-[22px] font-bold tracking-tight">3.100.000đ</span>
+<span class="text-on-surface-variant line-through text-label-sm opacity-60">3.880.000đ</span>
+</div>
+</div>
+<button data-product-id="yonex-65z2" class="w-full flex items-center justify-center gap-2 bg-inverse-surface text-surface py-3.5 rounded-xl font-bold text-label-md hover:bg-primary shadow-sm hover:shadow-lg transition-all transform group-active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+                        THÊM VÀO GIỎ
+                    </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-2">
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant hover:border-primary hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold shadow-lg">1</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant font-bold hover:border-primary hover:text-primary transition-all">2</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant font-bold hover:border-primary hover:text-primary transition-all">3</button>
+<span class="mx-2 text-on-surface-variant">...</span>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant font-bold hover:border-primary hover:text-primary transition-all">12</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant hover:border-primary hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<!-- ===== VNB FOOTER (shared) ===== -->
+<footer id="vnb-footer">
+  <div class="vnb-footer-inner">
+    <div class="vnb-footer-grid">
+      <!-- Brand -->
+      <div class="vnb-footer-brand">
+        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
+        <div class="vnb-footer-socials">
+          <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a href="#" title="YouTube"><span class="material-symbols-outlined">smart_display</span></a>
+          <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+      <!-- Sản phẩm -->
+      <div class="vnb-footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="sanpham.html"><span class="dot"></span>Vợt cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Giày cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Phụ kiện &amp; Dụng cụ</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
+        </ul>
+      </div>
+      <!-- Khách hàng -->
+      <div class="vnb-footer-col">
+        <h4>Khách hàng</h4>
+        <ul>
+          <li><a href="gioithieu.html"><span class="dot"></span>Về VNB Sports</a></li>
+          <li><a href="khuyenmai.html"><span class="dot"></span>Khuyến mãi</a></li>
+          <li><a href="daotao.html"><span class="dot"></span>Đào tạo</a></li>
+          <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <!-- Liên hệ -->
+      <div class="vnb-footer-col vnb-footer-contact">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone_in_talk</span>
+            <div><strong>1900 633 633</strong>Hỗ trợ từ 8:00 – 21:00</div>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@vnbsports.vn</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">pin_drop</span>
+            <span>Tòa nhà VNB, Phường 10, Quận 10, TP.HCM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vnb-footer-bottom">
+      <p>© 2024 VNB Sports. All Rights Reserved.</p>
+      <div class="vnb-footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+    // Search focus expand
+    const searchInput = document.querySelector('input[type="text"]');
+    searchInput.addEventListener('focus', () => {
+        searchInput.classList.remove('w-64');
+        searchInput.classList.add('w-80');
+    });
+    searchInput.addEventListener('blur', () => {
+        searchInput.classList.remove('w-80');
+        searchInput.classList.add('w-64');
+    });
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.querySelector('.bg-primary').classList.add('py-2');
+            header.querySelector('.bg-primary').classList.remove('py-4');
+        } else {
+            header.querySelector('.bg-primary').classList.add('py-4');
+            header.querySelector('.bg-primary').classList.remove('py-2');
+        }
+    });
+
+    // Card hover state management
+    document.querySelectorAll('.group').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Animation logic handled by Tailwind transition
+        });
+    });
+</script>
+<script>
+// === VNB Shared JS ===
+(function(){
+  // Hamburger toggle
+  var btn = document.getElementById('vnb-ham-btn');
+  var menu = document.getElementById('vnb-mobile-menu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  }
+  // Sticky shrink
+  var hdr = document.getElementById('vnb-header');
+  if(hdr){
+    window.addEventListener('scroll', function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .vnb-reveal').forEach(function(el){
+    el.classList.add('vnb-reveal');
+    obs.observe(el);
+  });
+})();
+</script>
+<script src="cart.js"></script>
+</body></html>

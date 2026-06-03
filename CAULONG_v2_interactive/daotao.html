@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đào Tạo &amp; Khóa Học Cầu Lông - VNB Sports</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffba20",
+                    "on-tertiary-fixed": "#1b1b1c",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e5e2e3",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#c6c4c5",
+                    "on-tertiary-fixed-variant": "#474647",
+                    "on-tertiary-container": "#525152",
+                    "tertiary": "#5f5e5f",
+                    "surface-container": "#edeeef",
+                    "on-secondary-container": "#003370",
+                    "inverse-primary": "#ffba20",
+                    "surface-tint": "#7c5800",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#514532",
+                    "secondary-container": "#659dfe",
+                    "primary-fixed": "#ffdea8",
+                    "on-primary-container": "#6b4c00",
+                    "primary-container": "#ffb800",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary-fixed": "#001a40",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline": "#837560",
+                    "outline-variant": "#d5c4ab",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#004491",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#c8c6c7",
+                    "on-background": "#191c1d",
+                    "background": "#f8f9fa",
+                    "surface-variant": "#e1e3e4",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary": "#115cb9",
+                    "primary": "#7c5800",
+                    "secondary-fixed-dim": "#acc7ff",
+                    "secondary-fixed": "#d7e2ff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "title-md": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Utility Bar -->
+<div class="bg-inverse-surface text-surface-container-lowest py-2 hidden md:block">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center font-label-sm text-label-sm">
+<div class="flex gap-stack-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">mail</span> info@vnbports.vn</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">call</span> 1900 6789</span>
+</div>
+<div class="flex gap-stack-md">
+<a class="hover:text-primary-fixed-dim transition-colors" href="#">Hệ thống cửa hàng</a>
+<a class="hover:text-primary-fixed-dim transition-colors" href="#">Đăng ký đại lý</a>
+</div>
+</div>
+</div>
+<!-- Main Navigation Shell -->
+<!-- ===== VNB HEADER (shared) ===== -->
+<header id="vnb-header">
+  <div id="vnb-topbar">
+    <div id="vnb-topbar-inner">
+      <div class="vnb-topbar-left">
+        <span><span class="material-symbols-outlined" style="font-size:14px">mail</span> info@vnbsports.vn</span>
+        <span><span class="material-symbols-outlined" style="font-size:14px">phone</span> 1900 633 633</span>
+      </div>
+      <div class="vnb-topbar-right">
+        <span>Hệ thống 50+ cửa hàng</span>
+        <span>Vietnam</span>
+      </div>
+    </div>
+  </div>
+  <div id="vnb-navbar">
+    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <ul id="vnb-navlinks">
+<li><a href="gioithieu.html">Giới thiệu</a></li>
+<li><a href="sanpham.html">Sản phẩm</a></li>
+<li><a href="daotao.html" class="active">Đào tạo</a></li>
+<li><a href="khuyenmai.html">Khuyến mãi</a></li>
+<li><a href="tintuc.html">Tin tức</a></li>
+<li><a href="tuyendung.html">Tuyển dụng</a></li>
+    </ul>
+    <div id="vnb-actions">
+      <div class="vnb-search-box">
+        <input type="text" placeholder="Tìm kiếm..."/>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <a href="giohang.html" class="vnb-icon-btn" title="Giỏ hàng">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vnb-cart-badge">3</span>
+      </a>
+      <a href="hoso.html" class="vnb-icon-btn" title="Tài khoản">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <button class="vnb-hamburger" id="vnb-ham-btn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="vnb-mobile-menu">
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="sanpham.html">Sản phẩm</a>
+<a href="daotao.html" class="active">Đào tạo</a>
+<a href="khuyenmai.html">Khuyến mãi</a>
+<a href="tintuc.html">Tin tức</a>
+<a href="tuyendung.html">Tuyển dụng</a>
+  </nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden bg-inverse-surface">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50" data-alt="A professional badminton player mid-smash on a high-performance court illuminated by dramatic overhead stadium lighting. The atmosphere is intense and energetic, featuring high-contrast yellow and deep blue highlights that align with the VNB Sports brand. The player's motion is captured with sharp precision against a dark, atmospheric background, emphasizing athletic excellence and the power of professional training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXBuWfuajQsk7nLvmg1DvwvFxyMJk6IdZj579p8S2xKtOuaIWlcjwe2BsmCKCfJZgdEdKs0RmoAf3ygPWkLyRAhxQCd0888c2ilQjmDTnePJytXBTU8JkPMxy8SZMcudhFz9jdePt-fLmT4Q4Rm1KSSOW41YeVMCDuTpO048HMaKOx74lXofjK2tvz4682AFm9Uw8FPjmzqsrPS6kR4VaVyDx3Z3A9ANmgPzyj8wMYZ0lnrhD59-3rL55BeF9RSvxQV4Kwg4LfW-M"/>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl text-surface-container-lowest">
+<span class="inline-block bg-primary px-4 py-1 rounded-full font-label-md text-label-md mb-4 uppercase tracking-widest text-on-primary">Học Viện VNB Academy</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">Nâng Tầm Kỹ Năng<br/><span class="text-primary-fixed-dim">Chinh Phục Đỉnh Cao</span></h1>
+<p class="font-body-lg text-body-lg mb-8 text-surface-variant">Hệ thống đào tạo cầu lông chuyên nghiệp từ căn bản đến nâng cao. Lộ trình cá nhân hóa, huấn luyện viên hàng đầu, cơ sở vật chất chuẩn quốc tế.</p>
+<div class="flex gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label-md text-label-md rounded-lg hover:scale-105 transition-transform flex items-center gap-2" href="#courses">
+                            Xem khóa học <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+<a class="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md rounded-lg hover:bg-on-secondary-fixed-variant transition-colors flex items-center gap-2" href="#register">
+                            Đăng ký ngay
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<p class="font-headline-lg text-headline-lg text-primary">5000+</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Học viên đã đào tạo</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg text-primary">50+</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Huấn luyện viên Pro</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg text-primary">20+</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Trung tâm toàn quốc</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg text-primary">98%</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Hài lòng về kết quả</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses Bento Grid -->
+<section class="py-stack-lg bg-background" id="courses">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Chương Trình Đào Tạo</h2>
+<p class="text-on-surface-variant">Lộ trình bài bản được thiết kế bởi các chuyên gia</p>
+</div>
+<a class="text-secondary font-label-md hover:underline flex items-center gap-1" href="#">Tất cả khóa học <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[250px]">
+<!-- Basic Course -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface border border-outline-variant transition-all hover:border-primary">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-40" data-alt="A focused beginner badminton session showing a group of enthusiasts learning the basic overhead stroke. The lighting is bright and natural, filling a modern indoor sports complex with soft daylight. The environment is clean and professional, featuring the signature yellow and blue VNB Sports branding in the background, creating an encouraging and motivational atmosphere for newcomers to the sport." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZNwfGNkblP3TejYD1PMq23pnufCg5WSV7ft5Ke39m2flKEgEzHvSgL4pL1BDYopP5i_iRg6_h36ob9yRgjanHSx1Kr4c0Mm-uZHUETLsppRQJDo5bxNVeF2f4_WTDdApMk-rrH-tG7sQPZbnKrlbf4tf7yWaR8fS1Yw0dClGrHPLB9M02kXNVYd1Cawipmge1MpnqgnPDsrMFEr4_Am246-0mVPgREs6MF86JRzKPF8jVHT0jEcS94oGQgJSrlNLSM1ak8DqkbFg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent p-stack-lg flex flex-col justify-end">
+<span class="bg-secondary-container text-on-secondary-container text-label-sm w-fit px-2 py-1 rounded mb-2">MỚI BẮT ĐẦU</span>
+<h3 class="font-title-md text-title-md text-white mb-2">Khóa Học Cầu Lông Cơ Bản</h3>
+<p class="text-surface-container text-body-md max-w-md">Làm quen với vợt, kỹ thuật di chuyển và các cú đánh nền tảng trong 12 buổi học.</p>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-primary-fixed-dim font-bold text-lg">2.500.000đ / khóa</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md">Đăng ký</button>
+</div>
+</div>
+</div>
+<!-- Kids Course -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface border border-outline-variant transition-all hover:border-primary">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-30" data-alt="Energetic children in a badminton training camp, laughing and engaging in a shuttlecock balancing drill. The scene is high-key and cheerful, set in a brightly lit gymnasium with polished wooden floors. The primary yellow color of the VNB brand is prominent in their uniforms and the surrounding equipment, conveying a sense of fun, health, and youthful athletic development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZiuJVcdHJdoLjWCtG8Gt7T1bq0e03ebtlRdDIlk4_N_hbxDYRZA-Cp0fprVCn90z0X8Qm3313WPEpPZ-lL_teSh60SPubvN-LGaMoh3yPX1_FIC_Y1id315DIJVZ2FpR_77gKUR9tQ2pFsF38YaWQA_fgVFauHG6_VciYY-f6rE0IiR5OeQvhmVAU-zAlsA_xinQ1kW4i8XNnC-EMO-AeLyi2zOmouSlIqxm2CgSwyNAJiutw_6RJGqqq9iq8zFGcM3-lbUCWgcM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 p-stack-lg flex flex-col justify-end">
+<span class="bg-primary-container text-on-primary-container text-label-sm w-fit px-2 py-1 rounded mb-2">JUNIOR</span>
+<h3 class="font-title-md text-title-md text-white">VNB Kids Academy</h3>
+<p class="text-surface-container-high text-body-md">Phát triển thể chất toàn diện cho trẻ từ 6-15 tuổi qua môn cầu lông.</p>
+</div>
+</div>
+<!-- Advanced Course -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface border border-outline-variant transition-all hover:border-primary">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-30" data-alt="A professional badminton coach meticulously demonstrating the grip and swing mechanics to a focused athlete. The lighting is studio-grade with strong side-lighting that highlights the muscle definition and technical precision of the movement. The color palette is dominated by deep blues and vibrant yellows, creating a technical and high-performance visual style that emphasizes elite-level training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxq-lbTlqHXrS36pFeJJOkkiGUptQFntb1IwxTk0SaB2b1MVWGxq0XMT3FNO2T2pl7YUtBXUiM0PwxWGWXlqdZ9_CSVqr0EOtbM3SIByQ1DBZDX7RJz6dKXwSj98-WE6KE28ZH-453eWF3l6JWS1DeZLOsxNLLfQCzf1Vr0e3XV-hj6x7w314T7CbBhOvmTk8gtYhWKocdvomKuspR5VBrzxYQxbhouZvMi-5dMX4BEtR-luzHndGcxibPkZ-0AJNdXzP7o2omNI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 p-stack-lg flex flex-col justify-end">
+<span class="bg-error text-on-error text-label-sm w-fit px-2 py-1 rounded mb-2">NÂNG CAO</span>
+<h3 class="font-title-md text-title-md text-white">Chiến Thuật &amp; Kỹ Thuật Pro</h3>
+<p class="text-surface-container-high text-body-md">Chuyên sâu về chiến thuật đánh đôi, đánh đơn và các kỹ thuật khó.</p>
+</div>
+</div>
+<!-- Private Coaching -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface border border-outline-variant transition-all hover:border-primary">
+<div class="absolute inset-0 bg-secondary flex items-center justify-between p-stack-lg">
+<div class="z-10 text-white max-w-sm">
+<span class="bg-white/20 text-white text-label-sm w-fit px-2 py-1 rounded mb-2">1-ON-1</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Huấn Luyện Cá Nhân 1 Kèm 1</h3>
+<p class="text-secondary-fixed mb-6">Lộ trình riêng biệt, thời gian linh hoạt, cam kết tiến bộ vượt bậc sau mỗi buổi học.</p>
+<button class="bg-white text-secondary font-bold px-8 py-3 rounded-lg hover:scale-105 transition-transform">Nhận tư vấn riêng</button>
+</div>
+<div class="hidden md:block relative w-1/2 h-full">
+<span class="material-symbols-outlined text-[180px] text-white/10 absolute right-0 bottom-0 select-none">sports_tennis</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coaches Carousel/Grid -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Đội Ngũ Huấn Luyện Viên</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Tất cả huấn luyện viên đều có chứng chỉ chuyên môn quốc gia và kinh nghiệm thi đấu chuyên nghiệp.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Coach 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A portrait of a charismatic and professional male badminton coach, wearing a sleek VNB Sports polo shirt in blue and yellow. He is standing in a brightly lit modern gym with a friendly and confident expression. The lighting is crisp and modern, emphasizing his athletic build and professionalism. The background is slightly blurred, focusing all attention on the coach as a reliable expert." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqPkCBw8h460FhJgdbtT279ooEAJPKns7-2XkZyeXbIy3P3DVezzIVCCggGog1xi_FT4P6czB959OmqrdjVvUDof91Gp0gCfqWPAyp1rNXG-G27FZJp_rLwQTsXDHoMY7c4oijrsNJI7Yuy4_QqpndwMtXllqKuaFOBLNHMay0ReIb21oLaUKVbvOeSRwZ69XZIXRP1daM2F9vJ0rzFoOkYzvJMcp1V82_3A5y_bui8NIdvm9lXxi35BeggxE8-RoV12RrRle8joU"/>
+</div>
+<div class="p-stack-md text-center">
+<h4 class="font-title-md text-title-md text-on-surface">Nguyễn Văn A</h4>
+<p class="text-primary font-label-md mb-3 text-label-md">Cựu Tuyển Thủ Quốc Gia</p>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span class="text-label-sm text-on-surface-variant">10 năm kinh nghiệm</span>
+</div>
+</div>
+</div>
+<!-- Coach 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional female badminton trainer with an athletic and confident posture, wearing VNB Sports athletic gear. She is holding a high-end badminton racket in a clean, high-contrast indoor setting. The lighting is soft but directional, highlighting her expertise and readiness. The overall aesthetic is professional, corporate yet energetic, reflecting the brand's commitment to high-performance training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9xrKI7WE26GJ3aplwM7hXaXnDGOTz2wVJcYGyNWEBOuQSy7Px5KiDkzJCHqrZpaISNszyM8PE7wf2QtQwpbdR3ONodVlM6iuuhxPywBs4H9A4qdmM39xq9MHpZqD8z0TEFEVsL2qVLrlZwL6cA1r6Z9mgmAboy--63dHGfNGObatwIAIOwxQm93O2_1gOhs1Uk32BkK3HggK7dtCwHA6dZ9Qc2-hXCKQofBwVcJaJr5WsG5-eqazFzu5Qt8iue0NshEkaNR53qhU"/>
+</div>
+<div class="p-stack-md text-center">
+<h4 class="font-title-md text-title-md text-on-surface">Trần Thị B</h4>
+<p class="text-primary font-label-md mb-3 text-label-md">Chuyên Gia Đào Tạo Trẻ</p>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span class="text-label-sm text-on-surface-variant">8 năm kinh nghiệm</span>
+</div>
+</div>
+</div>
+<!-- Coach 3 -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A focused male coach analyzing a play, captured in a dynamic action pose within a state-of-the-art badminton hall. The lighting is vibrant and multi-directional, highlighting the intensity of the sport. He is wearing a professional yellow coach jersey with the VNB Sports logo clearly visible. The mood is authoritative and knowledgeable, suggesting a deep understanding of badminton tactics and performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj7In30LJuM1ScpVW22NUMyRMHbbUxlW6GOefUOreKtup7DvJpNUdicZO-_qVORTq5ZWIAIt6FpodTzLUpS-qA5DeEd5HDETkd9XeQUMFT6DmrzZ_T2MDleRE_ScQLKWuOBRWmfV5cC90FRRIdP8XzbMU7_JYVP1e4M71ijZM9qs-MisRyXBM4cXnD6hx_95KjL_RWL30QNKQdx7jRN_QMF36W-eJOVGlAGXNfh3HeqvEBreRiH3mxT1kIvSRg-b1_eao0l0Lzq4w"/>
+</div>
+<div class="p-stack-md text-center">
+<h4 class="font-title-md text-title-md text-on-surface">Lê Văn C</h4>
+<p class="text-primary font-label-md mb-3 text-label-md">HLV Trưởng VNB Academy</p>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span class="text-label-sm text-on-surface-variant">15 năm kinh nghiệm</span>
+</div>
+</div>
+</div>
+<!-- Coach 4 -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden group hover:shadow-lg transition-all">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A skilled professional trainer demonstrating a backhand stroke with perfect form. The image is a sharp, high-contrast shot taken in a professional sports facility. The primary gold and secondary blue colors of VNB Sports are used in the lighting and floor markings, creating a visually cohesive and high-tech feel. The trainer's focus is palpable, embodying the technical precision taught at the academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpPyKUT1bKcC7AxBi2w0KfrO41qZ1fkrAkZqiksYGQi7gGOgKzGLzPnTqAYRmCF0yqDkMhjvkInWVkblnciFZPpwiM3cAQVSsEF_ekOHvXo6npu6j6Pmao24May8O50Hgfn1h698HrArte55AqEWyUvQugiqS1BhZwFlKHbQiAzLJvCpPd35lpO_MavNGSBJR9nybuRSSP9512l5vJPQ5Sj6hI3I7r1ksMhQdx8iViYto17EEHisLjNz8An8VC8pxUgVUsz8ol3OE"/>
+</div>
+<div class="p-stack-md text-center">
+<h4 class="font-title-md text-title-md text-on-surface">Phạm Văn D</h4>
+<p class="text-primary font-label-md mb-3 text-label-md">Chuyên Gia Thể Lực</p>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span class="text-label-sm text-on-surface-variant">12 năm kinh nghiệm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form with Location -->
+<section class="py-stack-lg bg-background" id="register">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-gutter bg-surface border border-outline-variant rounded-2xl overflow-hidden shadow-xl">
+<div class="lg:w-1/2 p-stack-lg lg:p-16 flex flex-col justify-center bg-primary-container">
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container mb-6">Bắt Đầu Hành Trình Của Bạn Ngay Hôm Nay</h2>
+<p class="text-on-primary-container font-body-lg mb-8">Để lại thông tin để nhận được lịch học phù hợp nhất và ưu đãi giảm giá <span class="font-bold">20% học phí</span> cho học viên mới đăng ký trong tháng này.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-on-primary-container">
+<span class="material-symbols-outlined p-2 bg-on-primary-container text-white rounded-full">call</span>
+<div>
+<p class="font-bold">Hotline Tư Vấn</p>
+<p>0912 345 678</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container">
+<span class="material-symbols-outlined p-2 bg-on-primary-container text-white rounded-full">location_on</span>
+<div>
+<p class="font-bold">Trung Tâm Gần Nhất</p>
+<p>Hệ thống 50+ chi nhánh toàn quốc</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 p-stack-lg lg:p-16">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md mb-2">Họ và tên</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-secondary focus:ring-secondary py-3" placeholder="Nhập tên của bạn" type="text"/>
+</div>
+<div>
+<label class="block text-label-md mb-2">Số điện thoại</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-secondary focus:ring-secondary py-3" placeholder="Số điện thoại liên hệ" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-label-md mb-2">Khóa học quan tâm</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-secondary focus:ring-secondary py-3">
+<option>Cơ bản cho người mới</option>
+<option>VNB Kids Academy</option>
+<option>Kỹ thuật &amp; Chiến thuật Nâng Cao</option>
+<option>Huấn luyện 1 kèm 1</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md mb-2">Lời nhắn</label>
+<textarea class="w-full rounded-lg border-outline-variant focus:border-secondary focus:ring-secondary py-3" placeholder="Yêu cầu cụ thể hoặc câu hỏi của bạn..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-bold py-4 rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg" type="submit">GỬI YÊU CẦU TƯ VẤN</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[400px] relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A stylized, modern map overview of Ho Chi Minh City, featuring professional markers for VNB Sports training centers. The map uses a minimalist, light-mode palette with subtle blue and grey tones. Key training locations are highlighted with vibrant yellow brand markers, creating a high-contrast and easy-to-read visual guide for students looking for the nearest academy branch." data-location="Ho Chi Minh City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8FdWUQMpDxA4NTJq3bMezR5x9lsyzx-qjsg3o29pR5N4_pAKbIHNisOIoWAB_muT8DmdzzJhpNCh1m5SGq8wh6tz4UmNN68m1Tm5frJmPoVHJg1esZRrNd6JiiCgce65Ru44pRY9uSN_Vz8sPQGm-TRsy0CaDtCYxuPMnqaorYmUBeHk72aAxudul1Alny_Rv7gJFiobrtidTa90XqvCAt4t_coQu2vtL9_w2_qfI0CPJWC5cveLow54doiq10o5YilHwGBu3l9U"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white/90 backdrop-blur-md p-stack-lg rounded-xl shadow-2xl border border-outline-variant max-w-sm text-center">
+<h3 class="font-title-md text-title-md mb-2">Tìm Trung Tâm Gần Bạn</h3>
+<p class="text-on-surface-variant mb-6">Chúng tôi có mặt tại hơn 20 tỉnh thành trên toàn quốc với 50+ cơ sở đào tạo chuẩn thi đấu.</p>
+<button class="bg-secondary text-white px-8 py-2 rounded-full font-label-md">Xem bản đồ chi tiết</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- ===== VNB FOOTER (shared) ===== -->
+<footer id="vnb-footer">
+  <div class="vnb-footer-inner">
+    <div class="vnb-footer-grid">
+      <!-- Brand -->
+      <div class="vnb-footer-brand">
+        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
+        <div class="vnb-footer-socials">
+          <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a href="#" title="YouTube"><span class="material-symbols-outlined">smart_display</span></a>
+          <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+      <!-- Sản phẩm -->
+      <div class="vnb-footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="sanpham.html"><span class="dot"></span>Vợt cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Giày cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Phụ kiện &amp; Dụng cụ</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
+        </ul>
+      </div>
+      <!-- Khách hàng -->
+      <div class="vnb-footer-col">
+        <h4>Khách hàng</h4>
+        <ul>
+          <li><a href="gioithieu.html"><span class="dot"></span>Về VNB Sports</a></li>
+          <li><a href="khuyenmai.html"><span class="dot"></span>Khuyến mãi</a></li>
+          <li><a href="daotao.html"><span class="dot"></span>Đào tạo</a></li>
+          <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <!-- Liên hệ -->
+      <div class="vnb-footer-col vnb-footer-contact">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone_in_talk</span>
+            <div><strong>1900 633 633</strong>Hỗ trợ từ 8:00 – 21:00</div>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@vnbsports.vn</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">pin_drop</span>
+            <span>Tòa nhà VNB, Phường 10, Quận 10, TP.HCM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vnb-footer-bottom">
+      <p>© 2024 VNB Sports. All Rights Reserved.</p>
+      <div class="vnb-footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FAB for quick contact -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col gap-4">
+<a class="bg-primary-container text-on-primary-container p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group relative" href="tel:19006789">
+<span class="material-symbols-outlined">call</span>
+<span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white px-4 py-1 rounded shadow text-label-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Hotline hỗ trợ</span>
+</a>
+<a class="bg-secondary text-on-secondary p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group relative" href="#register">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white px-4 py-1 rounded shadow text-label-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Đăng ký tư vấn</span>
+</a>
+</div>
+<script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>
+// === VNB Shared JS ===
+(function(){
+  // Hamburger toggle
+  var btn = document.getElementById('vnb-ham-btn');
+  var menu = document.getElementById('vnb-mobile-menu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  }
+  // Sticky shrink
+  var hdr = document.getElementById('vnb-header');
+  if(hdr){
+    window.addEventListener('scroll', function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .vnb-reveal').forEach(function(el){
+    el.classList.add('vnb-reveal');
+    obs.observe(el);
+  });
+})();
+</script>
+<script src="cart.js"></script>
+</body></html>

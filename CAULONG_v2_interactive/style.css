@@ -1,0 +1,373 @@
+/* ===================================================
+   VNB Sports – Shared Stylesheet
+   Dùng chung cho tất cả các trang của website
+   =================================================== */
+
+/* ---------- Google Fonts & Material Symbols ---------- */
+/* (đã import qua <link> trong HTML) */
+
+/* ---------- Base Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f8f9fa;
+  color: #191c1d;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Material Icons ---------- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ===================================================
+   VNB HEADER / NAVBAR – THỐNG NHẤT
+   =================================================== */
+
+#vnb-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: #7c5800;          /* primary */
+  box-shadow: 0 4px 12px rgba(0,0,0,.18);
+  transition: padding .3s ease;
+}
+
+/* Top utility bar */
+#vnb-topbar {
+  display: none;
+  background-color: rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+@media (min-width: 768px) { #vnb-topbar { display: flex; } }
+
+#vnb-topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,.80);
+}
+#vnb-topbar-inner a,
+#vnb-topbar-inner span { color: inherit; text-decoration: none; cursor: pointer; transition: color .2s; }
+#vnb-topbar-inner a:hover,
+#vnb-topbar-inner span:hover { color: #fff; }
+.vnb-topbar-left, .vnb-topbar-right { display: flex; align-items: center; gap: 24px; }
+.vnb-topbar-left span,
+.vnb-topbar-left a { display: flex; align-items: center; gap: 6px; }
+
+/* Main nav row */
+#vnb-navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+#vnb-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+#vnb-logo span { color: rgba(255,255,255,.75); }
+
+/* Desktop nav links */
+#vnb-navlinks {
+  display: none;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1024px) { #vnb-navlinks { display: flex; } }
+
+#vnb-navlinks a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+#vnb-navlinks a:hover { color: #fff; }
+#vnb-navlinks a.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Right actions */
+#vnb-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vnb-search-box {
+  display: none;
+  align-items: center;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  transition: background .2s;
+}
+@media (min-width: 640px) { .vnb-search-box { display: flex; } }
+.vnb-search-box:focus-within { background: rgba(255,255,255,.22); }
+.vnb-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  width: 140px;
+}
+.vnb-search-box input::placeholder { color: rgba(255,255,255,.50); }
+.vnb-search-box .material-symbols-outlined { color: #fff; font-size: 20px; cursor: pointer; }
+
+.vnb-icon-btn {
+  background: rgba(255,255,255,.12);
+  border: none;
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: transform .2s, background .2s;
+  text-decoration: none;
+  position: relative;
+}
+.vnb-icon-btn:hover { transform: scale(1.1); background: rgba(255,255,255,.22); }
+.vnb-icon-btn .material-symbols-outlined { font-size: 22px; }
+
+/* Cart badge */
+.vnb-cart-badge {
+  position: absolute;
+  top: 0; right: 0;
+  width: 18px; height: 18px;
+  border-radius: 9999px;
+  background: #ffb800;
+  color: #271900;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(25%,-25%);
+}
+
+/* Mobile hamburger */
+.vnb-hamburger {
+  display: flex;
+  background: rgba(255,255,255,.12);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+@media (min-width: 1024px) { .vnb-hamburger { display: none; } }
+
+/* Mobile menu dropdown */
+#vnb-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #6b4c00;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+#vnb-mobile-menu.open { display: flex; }
+#vnb-mobile-menu a {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  padding: 12px 24px;
+  transition: background .15s, color .15s;
+}
+#vnb-mobile-menu a:hover,
+#vnb-mobile-menu a.active { background: rgba(255,255,255,.10); color: #fff; }
+
+/* Scroll shrink */
+#vnb-header.scrolled #vnb-navbar { padding-top: 10px; padding-bottom: 10px; }
+
+/* Main content spacing to avoid header overlap – nếu dùng sticky thì không cần pt */
+body > main,
+body > .vnb-main { padding-top: 0; }
+
+
+/* ===================================================
+   VNB FOOTER – THỐNG NHẤT
+   =================================================== */
+
+#vnb-footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 72px 0 32px;
+}
+
+.vnb-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.vnb-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+@media (min-width: 768px) {
+  .vnb-footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .vnb-footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
+}
+
+/* Brand column */
+.vnb-footer-brand .vnb-footer-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffb800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  display: block;
+  text-decoration: none;
+}
+.vnb-footer-brand p {
+  color: rgba(255,255,255,.50);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.vnb-footer-socials { display: flex; gap: 12px; }
+.vnb-footer-socials a {
+  width: 40px; height: 40px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.70);
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.vnb-footer-socials a:hover { background: #ffb800; color: #271900; }
+.vnb-footer-socials .material-symbols-outlined { font-size: 18px; }
+
+/* Footer columns */
+.vnb-footer-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding-left: 14px;
+  border-left: 4px solid #ffb800;
+}
+.vnb-footer-col ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.vnb-footer-col ul li a {
+  font-size: 14px;
+  color: rgba(255,255,255,.50);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color .2s;
+}
+.vnb-footer-col ul li a:hover { color: #ffb800; }
+.vnb-footer-col ul li a .dot {
+  width: 5px; height: 5px;
+  border-radius: 9999px;
+  background: #ffb800;
+  flex-shrink: 0;
+}
+
+/* Contact column */
+.vnb-footer-contact ul { gap: 16px; }
+.vnb-footer-contact ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255,255,255,.55);
+  font-size: 14px;
+}
+.vnb-footer-contact ul li .material-symbols-outlined { color: #ffb800; font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+.vnb-footer-contact ul li strong { color: #fff; display: block; font-weight: 700; }
+
+/* Bottom bar */
+.vnb-footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .vnb-footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+}
+.vnb-footer-bottom p,
+.vnb-footer-bottom a {
+  font-size: 11px;
+  color: rgba(255,255,255,.28);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .2s;
+}
+.vnb-footer-bottom a:hover { color: rgba(255,255,255,.70); }
+.vnb-footer-bottom-links { display: flex; gap: 28px; }
+
+
+/* ===================================================
+   UTILITY CLASSES (dùng chung nếu không có Tailwind)
+   =================================================== */
+
+.vnb-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+@media (max-width: 767px) {
+  .vnb-container { padding-left: 16px; padding-right: 16px; }
+}
+
+/* Scroll-reveal helper */
+.vnb-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.vnb-reveal.visible {
+  opacity: 1;
+  transform: none;
+}

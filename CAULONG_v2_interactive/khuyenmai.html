@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#edeeef",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary": "#115cb9",
+                    "on-secondary-fixed-variant": "#004491",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#ffba20",
+                    "surface-tint": "#7c5800",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c7",
+                    "tertiary-container": "#c6c4c5",
+                    "on-surface": "#191c1d",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-fixed": "#ffdea8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#001a40",
+                    "background": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed": "#271900",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#474647",
+                    "on-background": "#191c1d",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-surface-variant": "#514532",
+                    "tertiary-fixed": "#e5e2e3",
+                    "outline-variant": "#d5c4ab",
+                    "on-tertiary-container": "#525152",
+                    "secondary-fixed": "#d7e2ff",
+                    "secondary-container": "#659dfe",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#6b4c00",
+                    "on-tertiary-fixed": "#1b1b1c",
+                    "tertiary": "#5f5e5f",
+                    "surface-variant": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#acc7ff",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "on-secondary-container": "#003370",
+                    "primary-container": "#ffb800",
+                    "outline": "#837560",
+                    "primary": "#7c5800"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "48px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "title-md": ["Be Vietnam Pro"],
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #7c5800 0%, #ffb800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Top Utility Bar -->
+<div class="bg-inverse-surface text-inverse-on-surface py-2">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center text-label-sm">
+<div class="flex gap-6">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">mail</span> info@vnbsports.vn</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">phone</span> 1900 6789</span>
+</div>
+<div class="flex gap-4">
+<span>Hệ thống 60 cửa hàng toàn quốc</span>
+</div>
+</div>
+</div>
+<!-- Main Navigation Header -->
+<!-- ===== VNB HEADER (shared) ===== -->
+<header id="vnb-header">
+  <div id="vnb-topbar">
+    <div id="vnb-topbar-inner">
+      <div class="vnb-topbar-left">
+        <span><span class="material-symbols-outlined" style="font-size:14px">mail</span> info@vnbsports.vn</span>
+        <span><span class="material-symbols-outlined" style="font-size:14px">phone</span> 1900 633 633</span>
+      </div>
+      <div class="vnb-topbar-right">
+        <span>Hệ thống 50+ cửa hàng</span>
+        <span>Vietnam</span>
+      </div>
+    </div>
+  </div>
+  <div id="vnb-navbar">
+    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <ul id="vnb-navlinks">
+<li><a href="gioithieu.html">Giới thiệu</a></li>
+<li><a href="sanpham.html">Sản phẩm</a></li>
+<li><a href="daotao.html">Đào tạo</a></li>
+<li><a href="khuyenmai.html" class="active">Khuyến mãi</a></li>
+<li><a href="tintuc.html">Tin tức</a></li>
+<li><a href="tuyendung.html">Tuyển dụng</a></li>
+    </ul>
+    <div id="vnb-actions">
+      <div class="vnb-search-box">
+        <input type="text" placeholder="Tìm kiếm..."/>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <a href="giohang.html" class="vnb-icon-btn" title="Giỏ hàng">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vnb-cart-badge">3</span>
+      </a>
+      <a href="hoso.html" class="vnb-icon-btn" title="Tài khoản">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <button class="vnb-hamburger" id="vnb-ham-btn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="vnb-mobile-menu">
+<a href="gioithieu.html">Giới thiệu</a>
+<a href="sanpham.html">Sản phẩm</a>
+<a href="daotao.html">Đào tạo</a>
+<a href="khuyenmai.html" class="active">Khuyến mãi</a>
+<a href="tintuc.html">Tin tức</a>
+<a href="tuyendung.html">Tuyển dụng</a>
+  </nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<!-- Flash Sale Section -->
+<section class="mb-stack-lg">
+<div class="bg-inverse-surface rounded-xl overflow-hidden relative shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent"></div>
+<div class="relative z-10 p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="text-center md:text-left flex-1">
+<div class="inline-block bg-primary text-on-primary px-4 py-1 rounded-sm font-label-sm uppercase tracking-[0.2em] mb-6">Limited Time Only</div>
+<h1 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-4">FLASH SALE <span class="text-primary-fixed text-6xl">50% OFF</span></h1>
+<p class="font-body-lg text-surface-variant max-w-xl opacity-90">Nâng tầm phong độ với thiết bị cầu lông chuyên nghiệp với mức giá cực kỳ ưu đãi. Cơ hội duy nhất trong năm không thể bỏ lỡ!</p>
+</div>
+<!-- New Countdown Component -->
+<div class="flex gap-6" id="countdown">
+<div class="flex flex-col items-center">
+<div class="bg-surface-container-lowest text-on-surface font-headline-xl w-24 h-24 flex items-center justify-center rounded-xl shadow-lg border-b-4 border-primary">12</div>
+<span class="font-label-md mt-3 uppercase tracking-widest text-surface-variant">Hours</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="bg-surface-container-lowest text-on-surface font-headline-xl w-24 h-24 flex items-center justify-center rounded-xl shadow-lg border-b-4 border-primary">55</div>
+<span class="font-label-md mt-3 uppercase tracking-widest text-surface-variant">Mins</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="bg-surface-container-lowest text-on-surface font-headline-xl w-24 h-24 flex items-center justify-center rounded-xl shadow-lg border-b-4 border-primary">32</div>
+<span class="font-label-md mt-3 uppercase tracking-widest text-surface-variant">Secs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Combo Deals -->
+<section class="mb-stack-lg">
+<div class="flex items-center gap-4 mb-8">
+<div class="p-2 bg-secondary/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1">package_2</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">Combo Siêu Tiết Kiệm</h2>
+<div class="flex-grow h-px bg-surface-container-highest"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Combo Card 1 -->
+<div class="group bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden flex flex-col xl:flex-row hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+<div class="xl:w-2/5 relative h-72 xl:h-auto overflow-hidden">
+<img alt="Combo Professional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqVQDUpb3HC3sd333eo18-BkYjwjNtjdVdbKh26p1p5bgJtVor-8fxNSkdmrlyXL99CfaqRR4PzpjvYpl8WrVjZfguRwETT9Ztv-xHQqpF13n_BvcXgDZcs_51Bhe56S1e7vzSCvDOKUcxUoOLof2l55R6h4hrHg8gSwCXNUCq07H3QcHasFWmxA72Dn5lmyJviVEPRzka6r_x3Z6Dte5aZ9AMOIHFtjwQMOOBUmYAi6Fb_5PiO9srTHX1SQ-AlzxLZAQV3WtRHs"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-4 py-1 font-label-sm uppercase rounded-sm shadow-md">COMBO PRO</div>
+</div>
+<div class="p-8 xl:w-3/5 flex flex-col justify-between">
+<div>
+<h3 class="font-title-md text-title-md mb-4 group-hover:text-primary transition-colors">Yonex Astrox 100ZZ Complete Set</h3>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x Astrox 100ZZ Racket
+                                </li>
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x BG80 High-Repulsion String
+                                </li>
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x Yonex Super Grap (3-pack)
+                                </li>
+</ul>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container pt-6">
+<div>
+<span class="block text-error line-through font-label-md opacity-60">5.200.000đ</span>
+<span class="text-secondary font-headline-lg text-headline-lg">4.350.000đ</span>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors">BUY NOW</button>
+</div>
+</div>
+</div>
+<!-- Combo Card 2 -->
+<div class="group bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden flex flex-col xl:flex-row hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+<div class="xl:w-2/5 relative h-72 xl:h-auto overflow-hidden">
+<img alt="Combo Speed" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHh93haVLfsF9IYbeZW5HAtSkKOlahMtByDO3l1SyUnKhGyFg1eXYbzY17gbeCiWox_ZjowYPCMY24QVwfN0e9FS7ircasgykFkCxZE0BHABJyYWhgEFcOM1Dfo-QwjPyPMA9aps9k5H541Z2DDPnBHZwMLfCfkisoe16-Z6HGlIVujW291n0wl_QfKgS7MTxL8AijLg_yokNAXyqBN5HMyroxL49fhXXRorzXNaboFTsqTXH7LWXlAV5Th6T_qdRc7F7X7IRq-bs"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-4 py-1 font-label-sm uppercase rounded-sm shadow-md">SPEED PACK</div>
+</div>
+<div class="p-8 xl:w-3/5 flex flex-col justify-between">
+<div>
+<h3 class="font-title-md text-title-md mb-4 group-hover:text-primary transition-colors">Victor Auraspeed 90K Speed Combo</h3>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x Auraspeed 90K Racket
+                                </li>
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x Victor VBS-66 Nano String
+                                </li>
+<li class="flex items-center gap-3 font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1x Victor Anti-Slip Grip
+                                </li>
+</ul>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container pt-6">
+<div>
+<span class="block text-error line-through font-label-md opacity-60">4.800.000đ</span>
+<span class="text-secondary font-headline-lg text-headline-lg">3.990.000đ</span>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors">BUY NOW</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Discount Grid (Synced with Home Style) -->
+<section>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
+<div class="flex items-center gap-4">
+<div class="w-2 h-10 bg-primary"></div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">Sản phẩm Đang Giảm Giá</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant font-label-md rounded-full hover:bg-primary hover:text-on-primary transition-all">Tất cả</button>
+<button class="px-6 py-2 bg-primary text-on-primary font-label-md rounded-full shadow-md">Vợt Cầu Lông</button>
+<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant font-label-md rounded-full hover:bg-primary hover:text-on-primary transition-all">Giày Cầu Lông</button>
+<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant font-label-md rounded-full hover:bg-primary hover:text-on-primary transition-all">Phụ kiện</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-sm overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Shoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByhSlgKC3FUR0zf6tasUfXYlnMkznB1zYGe-u3aBzCP3r0aT4qymcsoCfFekBV6VYYjQWN1f36wdoChQOaQhQ5V4YshK-gamURdR_I83tICBXpVQ5IvzW-eB-Dj5-vC9T4WrTtfqn2bzYFtcrPOsM239gHZDJ2QIY5KnjqZPDGjVJvhuBZX_NmakgBi2fYP4lNseUmKONuzbZHn7g6hM3bQvR30-tA6wnMZw-xB4vu0yQzvV2pmnrCXPa5E1NyhCve4T6S1TOdd7k"/>
+<div class="absolute top-3 right-3 bg-error text-on-error px-2.5 py-1 font-label-sm rounded-sm font-bold">-35%</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-primary opacity-80 mb-2 uppercase tracking-widest">LINING</span>
+<h4 class="font-label-md text-label-md line-clamp-2 mb-4 group-hover:text-secondary transition-colors">Giày Cầu Lông Lining AYAT001-2 Chính Hãng</h4>
+<div class="mt-auto">
+<span class="block text-on-surface-variant line-through font-label-sm opacity-60">2.450.000đ</span>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary font-title-md text-title-md">1.590.000đ</span>
+</div>
+</div>
+<button class="mt-5 w-full border-2 border-primary text-primary py-2.5 font-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all duration-300">ADD TO CART</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-sm overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmuB04gxb9EnvcxmOSbZUiDwMpAGdPIg0j-gNje8rrxgIczkKOZ3Wm3gJcJSfIlsi2ql1smKhNA5vFG9sW_hUe10s72RD070BFfeAbImSi8Vk6ki_jacIIWTHNn1sV9pG_zs30NpJgiPT-8Jrq1QQElr5XX9ZebSfwADAcevvxM0eREzXzZ2jl6pSY-hUVBnuGk3twmDZpzVPUR6C5T-caQUt-edk5V2NjEdMIoqicMXc-dFiavopa_WMTSI9lvADt8kj41-P714k"/>
+<div class="absolute top-3 right-3 bg-error text-on-error px-2.5 py-1 font-label-sm rounded-sm font-bold">-20%</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-primary opacity-80 mb-2 uppercase tracking-widest">YONEX</span>
+<h4 class="font-label-md text-label-md line-clamp-2 mb-4 group-hover:text-secondary transition-colors">Túi Cầu Lông Yonex BA92231WEX Pro Series</h4>
+<div class="mt-auto">
+<span class="block text-on-surface-variant line-through font-label-sm opacity-60">1.850.000đ</span>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary font-title-md text-title-md">1.480.000đ</span>
+</div>
+</div>
+<button class="mt-5 w-full border-2 border-primary text-primary py-2.5 font-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all duration-300">ADD TO CART</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-sm overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Shuttlecocks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFsvwxPsAQTAp13dCWFg3lEFFzq_-KIIIM6pKzBlhStO1uRrji8AzzXRhypq5nk7Qs7Ftvzqktj2zLJqU9qX9Q7ZSNqSB50_hNACevUuwNR8Mn-iqfhP6etOlsnHKAHvRRQiTOYak2S46i10bVyI70V8kvyLDbt3q5AQiuCz0xr9PuVxCGCit8a4yLrwIDfRZDMrrHlOXA9yXm6v20nnFWWe6akKx82JQFDg4yzXHRRWkqzMf7Wqq06W2Okb8HDghMETTTQOvIGts"/>
+<div class="absolute top-3 right-3 bg-error text-on-error px-2.5 py-1 font-label-sm rounded-sm font-bold">-15%</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-primary opacity-80 mb-2 uppercase tracking-widest">VICTOR</span>
+<h4 class="font-label-md text-label-md line-clamp-2 mb-4 group-hover:text-secondary transition-colors">Ống Cầu Lông Victor Master Ace (12 Quả)</h4>
+<div class="mt-auto">
+<span class="block text-on-surface-variant line-through font-label-sm opacity-60">450.000đ</span>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary font-title-md text-title-md">385.000đ</span>
+</div>
+</div>
+<button class="mt-5 w-full border-2 border-primary text-primary py-2.5 font-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all duration-300">ADD TO CART</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-sm overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Racket" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ZxTS9lHtUzu9bH747gCIl5cO5DQVBefExjjX_xyMBjf11-wnqKre9qktP1jbcer5wbMQ1SwW5uVnmvkNwwXu7lP1HydA6kKSa0fs1_CWBuJNQqaoo9fKZqTRdVqHnK24cH_jhuOv54n5QxeCIz0czXrXTLKfhvUWciTfuzLXn9yD2c-Bd9sy6AB5bGdLFoXUSYO67w9AeZCKy8D1pq1zKjbZESGM7InEwGH02xsT6bFwGF0vIOvb5WqQolOzpen9jJN0dVEoE6Q"/>
+<div class="absolute top-3 right-3 bg-error text-on-error px-2.5 py-1 font-label-sm rounded-sm font-bold">-40%</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-primary opacity-80 mb-2 uppercase tracking-widest">KIZUNA</span>
+<h4 class="font-label-md text-label-md line-clamp-2 mb-4 group-hover:text-secondary transition-colors">Vợt Cầu Lông Kizuna Black Mamba Carbon</h4>
+<div class="mt-auto">
+<span class="block text-on-surface-variant line-through font-label-sm opacity-60">3.200.000đ</span>
+<div class="flex items-baseline gap-2">
+<span class="text-secondary font-title-md text-title-md">1.920.000đ</span>
+</div>
+</div>
+<button class="mt-5 w-full border-2 border-primary text-primary py-2.5 font-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all duration-300">ADD TO CART</button>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="group flex items-center gap-3 font-label-md text-on-surface py-3 px-10 border-2 border-outline hover:border-primary hover:text-primary transition-all rounded-full">
+                    XEM THÊM 24 SẢN PHẨM KHUYẾN MÃI
+                    <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Newsletter Section (High Contrast) -->
+<section class="bg-primary-container py-16 mt-stack-lg border-y border-primary/20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<h3 class="font-headline-lg text-headline-lg text-on-primary-container mb-4 uppercase tracking-tight">Đăng ký nhận tin khuyến mãi</h3>
+<p class="font-body-lg text-on-primary-container opacity-90">Tham gia cộng đồng VNB để nhận thông báo sớm nhất về các đợt Flash Sale và mã giảm giá độc quyền hàng tháng.</p>
+</div>
+<div class="md:w-1/2 w-full flex flex-col sm:flex-row gap-3">
+<input class="flex-grow rounded-sm border-2 border-primary/10 px-6 py-4 text-label-md shadow-inner focus:ring-2 focus:ring-secondary focus:border-transparent outline-none" placeholder="Địa chỉ email của bạn..." type="email"/>
+<button class="bg-inverse-surface text-surface px-10 py-4 font-label-md uppercase tracking-widest rounded-sm hover:bg-primary transition-all shadow-lg active:scale-95">Đăng ký</button>
+</div>
+</div>
+</section>
+<!-- New Standard Footer -->
+<!-- ===== VNB FOOTER (shared) ===== -->
+<footer id="vnb-footer">
+  <div class="vnb-footer-inner">
+    <div class="vnb-footer-grid">
+      <!-- Brand -->
+      <div class="vnb-footer-brand">
+        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
+        <div class="vnb-footer-socials">
+          <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a href="#" title="YouTube"><span class="material-symbols-outlined">smart_display</span></a>
+          <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+      <!-- Sản phẩm -->
+      <div class="vnb-footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="sanpham.html"><span class="dot"></span>Vợt cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Giày cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Phụ kiện &amp; Dụng cụ</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
+        </ul>
+      </div>
+      <!-- Khách hàng -->
+      <div class="vnb-footer-col">
+        <h4>Khách hàng</h4>
+        <ul>
+          <li><a href="gioithieu.html"><span class="dot"></span>Về VNB Sports</a></li>
+          <li><a href="khuyenmai.html"><span class="dot"></span>Khuyến mãi</a></li>
+          <li><a href="daotao.html"><span class="dot"></span>Đào tạo</a></li>
+          <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <!-- Liên hệ -->
+      <div class="vnb-footer-col vnb-footer-contact">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone_in_talk</span>
+            <div><strong>1900 633 633</strong>Hỗ trợ từ 8:00 – 21:00</div>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@vnbsports.vn</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">pin_drop</span>
+            <span>Tòa nhà VNB, Phường 10, Quận 10, TP.HCM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vnb-footer-bottom">
+      <p>© 2024 VNB Sports. All Rights Reserved.</p>
+      <div class="vnb-footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+        // Simple Countdown Timer Logic
+        function updateCountdown() {
+            const now = new Date();
+            const hours = 23 - now.getHours();
+            const minutes = 59 - now.getMinutes();
+            const seconds = 59 - now.getSeconds();
+            
+            const containers = document.getElementById('countdown').children;
+            containers[0].querySelector('div').innerText = hours.toString().padStart(2, '0');
+            containers[1].querySelector('div').innerText = minutes.toString().padStart(2, '0');
+            containers[2].querySelector('div').innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.group, section').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+<script>
+// === VNB Shared JS ===
+(function(){
+  // Hamburger toggle
+  var btn = document.getElementById('vnb-ham-btn');
+  var menu = document.getElementById('vnb-mobile-menu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  }
+  // Sticky shrink
+  var hdr = document.getElementById('vnb-header');
+  if(hdr){
+    window.addEventListener('scroll', function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .vnb-reveal').forEach(function(el){
+    el.classList.add('vnb-reveal');
+    obs.observe(el);
+  });
+})();
+</script>
+<script src="cart.js"></script>
+</body></html>
