@@ -140,7 +140,7 @@
     </div>
   </div>
   <div id="vnb-navbar">
-    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <a id="vnb-logo" href="index.html">VNB<span>Sports</span></a>
     <ul id="vnb-navlinks">
 <li><a href="gioithieu.html">Giới thiệu</a></li>
 <li><a href="sanpham.html">Sản phẩm</a></li>
@@ -240,7 +240,7 @@
 <span class="block text-error line-through font-label-md opacity-60">5.200.000đ</span>
 <span class="text-secondary font-headline-lg text-headline-lg">4.350.000đ</span>
 </div>
-<button class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors">BUY NOW</button>
+<a href="sanpham.html" class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors inline-block">BUY NOW</a>
 </div>
 </div>
 </div>
@@ -270,7 +270,7 @@
 <span class="block text-error line-through font-label-md opacity-60">4.800.000đ</span>
 <span class="text-secondary font-headline-lg text-headline-lg">3.990.000đ</span>
 </div>
-<button class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors">BUY NOW</button>
+<a href="sanpham.html" class="bg-primary text-on-primary px-8 py-3 font-label-md uppercase tracking-wider rounded-sm hover:bg-inverse-surface transition-colors inline-block">BUY NOW</a>
 </div>
 </div>
 </div>
@@ -392,7 +392,7 @@
     <div class="vnb-footer-grid">
       <!-- Brand -->
       <div class="vnb-footer-brand">
-        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <a class="vnb-footer-logo" href="index.html">VNB Sports</a>
         <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
         <div class="vnb-footer-socials">
           <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
@@ -508,4 +508,42 @@
 })();
 </script>
 <script src="cart.js"></script>
+<a id="vnb-back-home" href="index.html" title="Về trang chủ">
+  <span class="material-symbols-outlined">home</span>
+  Trang chủ
+</a>
+
+<div id="vnb-page-overlay"></div>
+<script>
+(function(){
+  // Fade in on load
+  document.documentElement.classList.add('vnb-ready');
+
+  var overlay = document.getElementById('vnb-page-overlay');
+
+  function navigate(href) {
+    overlay.classList.add('leaving');
+    setTimeout(function(){ window.location.href = href; }, 270);
+  }
+
+  // Intercept all local links
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || a.target === '_blank') return;
+    e.preventDefault();
+    navigate(href);
+  }, true);
+
+  // Back button – show on non-home pages
+  var backBtn = document.getElementById('vnb-back-home');
+  if (backBtn) {
+    var current = window.location.pathname.replace(/\/$/, '').split('/').pop() || '';
+    if (current !== 'index.html' && current !== '') {
+      backBtn.style.display = 'flex';
+    }
+  }
+})();
+</script>
 </body></html>

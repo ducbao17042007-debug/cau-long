@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .map-gradient { background: radial-gradient(circle at center, transparent 0%, #f8f9fa 100%); }
+        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(255, 186, 32, 0.15) 0, transparent 50%), radial-gradient(at 50% 0%, rgba(124, 88, 0, 0.05) 0, transparent 50%); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#edeeef",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#115cb9",
+                        "on-secondary-fixed-variant": "#004491",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-primary": "#ffba20",
+                        "surface-tint": "#7c5800",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "tertiary-container": "#c6c4c5",
+                        "on-surface": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-fixed": "#ffdea8",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001a40",
+                        "background": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-fixed": "#271900",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#474647",
+                        "on-background": "#191c1d",
+                        "primary-fixed-dim": "#ffba20",
+                        "on-surface-variant": "#514532",
+                        "tertiary-fixed": "#e5e2e3",
+                        "outline-variant": "#d5c4ab",
+                        "on-tertiary-container": "#525152",
+                        "secondary-fixed": "#d7e2ff",
+                        "secondary-container": "#659dfe",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#6b4c00",
+                        "on-tertiary-fixed": "#1b1b1c",
+                        "tertiary": "#5f5e5f",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "on-secondary-container": "#003370",
+                        "primary-container": "#ffb800",
+                        "outline": "#837560",
+                        "primary": "#7c5800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "48px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "title-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<!-- ===== VNB HEADER (shared) ===== -->
+<header id="vnb-header">
+  <div id="vnb-topbar">
+    <div id="vnb-topbar-inner">
+      <div class="vnb-topbar-left">
+        <span><span class="material-symbols-outlined" style="font-size:14px">mail</span> info@vnbsports.vn</span>
+        <span><span class="material-symbols-outlined" style="font-size:14px">phone</span> 1900 633 633</span>
+      </div>
+      <div class="vnb-topbar-right">
+        <span>Hệ thống 50+ cửa hàng</span>
+        <span>Vietnam</span>
+      </div>
+    </div>
+  </div>
+  <div id="vnb-navbar">
+    <a id="vnb-logo" href="index.html">VNB<span>Sports</span></a>
+    <ul id="vnb-navlinks">
+<li><a href="gioithieu.html" class="active">Giới thiệu</a></li>
+<li><a href="sanpham.html">Sản phẩm</a></li>
+<li><a href="daotao.html">Đào tạo</a></li>
+<li><a href="khuyenmai.html">Khuyến mãi</a></li>
+<li><a href="tintuc.html">Tin tức</a></li>
+<li><a href="tuyendung.html">Tuyển dụng</a></li>
+    </ul>
+    <div id="vnb-actions">
+      <div class="vnb-search-box">
+        <input type="text" placeholder="Tìm kiếm..."/>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+      <a href="giohang.html" class="vnb-icon-btn" title="Giỏ hàng">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vnb-cart-badge">3</span>
+      </a>
+      <a href="hoso.html" class="vnb-icon-btn" title="Tài khoản">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+      <button class="vnb-hamburger" id="vnb-ham-btn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="vnb-mobile-menu">
+<a href="gioithieu.html" class="active">Giới thiệu</a>
+<a href="sanpham.html">Sản phẩm</a>
+<a href="daotao.html">Đào tạo</a>
+<a href="khuyenmai.html">Khuyến mãi</a>
+<a href="tintuc.html">Tin tức</a>
+<a href="tuyendung.html">Tuyển dụng</a>
+  </nav>
+</header>
+<main class="">
+<!-- Hero Section -->
+<section class="relative h-[650px] flex items-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover scale-105" data-alt="A professional badminton athlete in action, lunging for a shuttlecock on a high-end indoor court. The lighting is cinematic and high-contrast, emphasizing the dynamic motion and technical precision. The color palette features bold yellow and deep blue accents against a modern, bright sports facility backdrop. The overall mood is energetic, inspiring, and focused on athletic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCMSfDWCTWLUUYPdC8n2CuUu_UjRB8MkkdlQf2lQmLMU9vhhWg0xB7ZBfWmhy3yS3lijEH_TiN5NzD08eJe4Vs-oIM3Nxh1-R4j5TH-7DkD1KNBNg9tudGHClIMwzsuSeC8D65BEsjkKgsgiaBDk2TTjD3ll6rNIbAt_I2JjnacaitqV71P1xEVtjF_r8_yU8JZjyWhhhWw0sltJPFT-uBCd0zlaum5nSIE_I9likAN0DnMbwwZvqKL7aJ8Bl8o-Y3X88zVPudCqE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+<div class="relative max-w-container-max mx-auto px-margin-desktop w-full text-white">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary text-on-primary px-4 py-1.5 rounded-full text-label-sm font-bold tracking-widest uppercase mb-6">Since 2012</span>
+<h1 class="font-headline-xl text-5xl md:text-6xl mb-stack-md leading-tight">Nâng tầm cầu lông Việt Nam bằng sự chuyên nghiệp</h1>
+<p class="font-body-lg text-lg md:text-xl text-white/80 max-w-xl border-l-4 border-primary pl-6">Hành trình hơn 10 năm xây dựng hệ sinh thái cầu lông hàng đầu, kết nối niềm đam mê và kiến tạo những giá trị bền vững cho cộng đồng.</p>
+</div>
+</div>
+</section>
+<!-- Brand History & Mission -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-24 bg-mesh">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<div>
+<span class="text-primary font-bold text-label-md tracking-[0.2em] uppercase block mb-2">HÀNH TRÌNH PHÁT TRIỂN</span>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-on-surface leading-tight">Từ niềm đam mê đến hệ thống <span class="text-primary underline decoration-primary/30 underline-offset-8">50+ cửa hàng</span></h2>
+</div>
+<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">VNB Sports bắt đầu từ khát vọng mang đến những trang thiết bị cầu lông chính hãng, chất lượng nhất cho người chơi tại Việt Nam. Không chỉ là một đơn vị bán lẻ, chúng tôi tự hào là người đồng hành cùng sự phát triển của phong trào cầu lông nước nhà thông qua các giải đấu và hoạt động cộng đồng.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-high transition-transform hover:-translate-y-1">
+<div class="font-headline-lg text-5xl text-primary mb-2">2012</div>
+<div class="font-label-md text-on-surface/60 uppercase tracking-wider">Thành lập cửa hàng đầu tiên</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-high transition-transform hover:-translate-y-1">
+<div class="font-headline-lg text-5xl text-primary mb-2">50+</div>
+<div class="font-label-md text-on-surface/60 uppercase tracking-wider">Chi nhánh trên toàn quốc</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 rounded-[2rem] -rotate-2 transition-transform group-hover:rotate-0"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl h-[550px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior of a modern, premium badminton retail store showcasing neatly organized rackets on wall displays. The shop features clean architectural lines with bright white lighting and warm wooden accents. Professional sports equipment is presented with technical precision, reflecting a high-end corporate retail environment. The atmosphere is inviting and professional, designed for enthusiasts and professional athletes alike." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99NaBd-XAeIqodPVU-tU4slG3BQdaJxwuq5d5OUzLYtoHGJzwGxi15KYWaEhS232cseC3mH8wQ-aIwhs82j_A1ZslcNyWYEiXGueMiOmNeGraGGNWAtRvvKYZn1IyUN7ZScyhZwQ7N1408H-nJdCkvmD_p-jI37QUJ30udHlFqIftt_uOXlqjGIck_CvV18rnvciXOL4FQlPQImtTlu_AZXAJcKC1eAnT3QbQH4peVAlzdkhusr5m82gIpyxXzZAbhpkBjV753mY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values: Modern Cards -->
+<section class="bg-on-surface text-white py-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative">
+<div class="text-center mb-16">
+<span class="text-primary font-bold text-label-md tracking-widest uppercase block mb-3">Our DNA</span>
+<h2 class="font-headline-lg text-4xl mb-4">Giá trị cốt lõi của VNB</h2>
+<div class="w-20 h-1.5 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-title-md text-2xl mb-4 text-primary">Đam mê (Passion)</h3>
+<p class="font-body-md text-white/60 leading-relaxed">Chúng tôi làm việc bằng cả trái tim và tình yêu dành cho bộ môn cầu lông, lan tỏa năng lượng tích cực đến cộng đồng qua từng sản phẩm.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 -rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h3 class="font-title-md text-2xl mb-4 text-primary">Chất lượng (Quality)</h3>
+<p class="font-body-md text-white/60 leading-relaxed">Cam kết 100% sản phẩm chính hãng từ các thương hiệu hàng đầu thế giới. Chúng tôi nói không với hàng giả, hàng nhái.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 rotate-6 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">business_center</span>
+</div>
+<h3 class="font-title-md text-2xl mb-4 text-primary">Chuyên nghiệp (Professionalism)</h3>
+<p class="font-body-md text-white/60 leading-relaxed">Quy trình đào tạo bài bản, dịch vụ tư vấn tận tâm và hệ thống bảo hành đồng bộ trên toàn quốc, mang lại an tâm tuyệt đối.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Nationwide Coverage Map -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 space-y-8">
+<div>
+<span class="text-primary font-bold text-label-md tracking-widest uppercase block mb-3">Mạng lưới VNB</span>
+<h2 class="font-headline-lg text-4xl leading-tight text-on-surface">Phủ sóng rộng khắp<br/>khắp mọi miền Tổ quốc</h2>
+</div>
+<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">Với hơn 50 chi nhánh từ Bắc vào Nam, VNB Sports luôn có mặt bất cứ nơi nào bạn cần trang thiết bị cầu lông chuyên nghiệp và dịch vụ căng vợt tiêu chuẩn quốc tế.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">TP. Hồ Chí Minh</h4>
+<p class="text-sm text-on-surface-variant">20+ Cửa hàng chính hãng</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Hà Nội</h4>
+<p class="text-sm text-on-surface-variant">10+ Cửa hàng chính hãng</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Các tỉnh thành khác</h4>
+<p class="text-sm text-on-surface-variant">Đà Nẵng, Cần Thơ, Hải Phòng...</p>
+</div>
+</div>
+</div>
+<a href="sanpham.html" class="w-full sm:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-bold shadow-lg shadow-primary/20 hover:bg-surface-tint hover:-translate-y-1 transition-all uppercase tracking-widest text-sm flex items-center justify-center gap-3 group">
+                        Tìm cửa hàng gần bạn
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="lg:col-span-7 relative rounded-3xl border border-surface-container-high overflow-hidden h-[600px] shadow-inner bg-white">
+<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="A stylized map representation of Vietnam with multiple glowing location markers scattered across the major cities from north to south. The aesthetic is clean, modern, and data-driven, using a light gray background with subtle grid lines. The lighting is soft and corporate, emphasizing the vast network and accessibility of the brand across the entire country." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ZDO-5k9C8Wt0YL8CatvAlARM3rRDQ1wAt0nTZ9v_ZTpcJNGWqc_2WqIjo5LytjcqKSq6_f5edkWQXybUPn9XFctTnjBnojAUsA-p918qYc31kj1JjTfiVATqYvxqca37QX-4w3TsfQHtKhDwFHioRRF2XN_Axh9ILhGaJhb8rrm-itlSEyXR2DZgVD3vGr7W2NQWe8-yd6fUT3BYYuEo2bPEdZhzHM15yUekKvQhe3-KlNwq-_eYO3QjfK8bhcV9irc41724T9A"/>
+<div class="absolute inset-0 map-gradient pointer-events-none"></div>
+<!-- Pulsing Markers -->
+<div class="absolute top-[18%] left-[48%] group cursor-pointer">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB Hà Nội</div>
+</div>
+<div class="absolute top-[82%] left-[55%] group cursor-pointer">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB TP. Hồ Chí Minh</div>
+</div>
+<div class="absolute top-[52%] left-[58%] group cursor-pointer">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB Đà Nẵng</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- ===== VNB FOOTER (shared) ===== -->
+<footer id="vnb-footer">
+  <div class="vnb-footer-inner">
+    <div class="vnb-footer-grid">
+      <!-- Brand -->
+      <div class="vnb-footer-brand">
+        <a class="vnb-footer-logo" href="index.html">VNB Sports</a>
+        <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
+        <div class="vnb-footer-socials">
+          <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a href="#" title="YouTube"><span class="material-symbols-outlined">smart_display</span></a>
+          <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+      <!-- Sản phẩm -->
+      <div class="vnb-footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="sanpham.html"><span class="dot"></span>Vợt cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Giày cầu lông</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Phụ kiện &amp; Dụng cụ</a></li>
+          <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
+        </ul>
+      </div>
+      <!-- Khách hàng -->
+      <div class="vnb-footer-col">
+        <h4>Khách hàng</h4>
+        <ul>
+          <li><a href="gioithieu.html"><span class="dot"></span>Về VNB Sports</a></li>
+          <li><a href="khuyenmai.html"><span class="dot"></span>Khuyến mãi</a></li>
+          <li><a href="daotao.html"><span class="dot"></span>Đào tạo</a></li>
+          <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <!-- Liên hệ -->
+      <div class="vnb-footer-col vnb-footer-contact">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone_in_talk</span>
+            <div><strong>1900 633 633</strong>Hỗ trợ từ 8:00 – 21:00</div>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@vnbsports.vn</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">pin_drop</span>
+            <span>Tòa nhà VNB, Phường 10, Quận 10, TP.HCM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vnb-footer-bottom">
+      <p>© 2024 VNB Sports. All Rights Reserved.</p>
+      <div class="vnb-footer-bottom-links">
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-1');
+                header.classList.remove('shadow-none');
+            } else {
+                header.classList.remove('py-1');
+            }
+        });
+    </script>
+<script>
+// === VNB Shared JS ===
+(function(){
+  // Hamburger toggle
+  var btn = document.getElementById('vnb-ham-btn');
+  var menu = document.getElementById('vnb-mobile-menu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  }
+  // Sticky shrink
+  var hdr = document.getElementById('vnb-header');
+  if(hdr){
+    window.addEventListener('scroll', function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .vnb-reveal').forEach(function(el){
+    el.classList.add('vnb-reveal');
+    obs.observe(el);
+  });
+})();
+</script>
+<script src="cart.js"></script>
+<a id="vnb-back-home" href="index.html" title="Về trang chủ">
+  <span class="material-symbols-outlined">home</span>
+  Trang chủ
+</a>
+
+<div id="vnb-page-overlay"></div>
+<script>
+(function(){
+  // Fade in on load
+  document.documentElement.classList.add('vnb-ready');
+
+  var overlay = document.getElementById('vnb-page-overlay');
+
+  function navigate(href) {
+    overlay.classList.add('leaving');
+    setTimeout(function(){ window.location.href = href; }, 270);
+  }
+
+  // Intercept all local links
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || a.target === '_blank') return;
+    e.preventDefault();
+    navigate(href);
+  }, true);
+
+  // Back button – show on non-home pages
+  var backBtn = document.getElementById('vnb-back-home');
+  if (backBtn) {
+    var current = window.location.pathname.replace(/\/$/, '').split('/').pop() || '';
+    if (current !== 'index.html' && current !== '') {
+      backBtn.style.display = 'flex';
+    }
+  }
+})();
+</script>
+</body></html>

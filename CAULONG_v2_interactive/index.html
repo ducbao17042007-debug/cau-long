@@ -1,114 +1,112 @@
 <!DOCTYPE html>
-
-<html class="light" lang="vi"><head>
+<html class="light" lang="vi">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VNB Sports – Chinh Phục Mọi Đường Cầu</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
-        body { font-family: 'Be Vietnam Pro', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .map-gradient { background: radial-gradient(circle at center, transparent 0%, #f8f9fa 100%); }
-        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(255, 186, 32, 0.15) 0, transparent 50%), radial-gradient(at 50% 0%, rgba(124, 88, 0, 0.05) 0, transparent 50%); }
-    </style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; line-height:1; }
+  .hero-gradient { background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.15) 55%, transparent 100%); }
+  .skew-tag { transform: skewX(-12deg); }
+  .skew-tag-inner { transform: skewX(12deg); display: inline-block; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .float-1 { animation: float 3.2s ease-in-out infinite; }
+  .float-2 { animation: float 3.2s ease-in-out infinite 0.6s; }
+</style>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container": "#edeeef",
-                        "inverse-surface": "#2e3132",
-                        "on-tertiary": "#ffffff",
-                        "surface-dim": "#d9dadb",
-                        "surface-container-high": "#e7e8e9",
-                        "secondary": "#115cb9",
-                        "on-secondary-fixed-variant": "#004491",
-                        "surface-container-low": "#f3f4f5",
-                        "inverse-primary": "#ffba20",
-                        "surface-tint": "#7c5800",
-                        "on-secondary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#c8c6c7",
-                        "tertiary-container": "#c6c4c5",
-                        "on-surface": "#191c1d",
-                        "inverse-on-surface": "#f0f1f2",
-                        "primary-fixed": "#ffdea8",
-                        "error": "#ba1a1a",
-                        "on-error": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-secondary-fixed": "#001a40",
-                        "background": "#f8f9fa",
-                        "surface-container-highest": "#e1e3e4",
-                        "on-primary-fixed": "#271900",
-                        "surface-container-lowest": "#ffffff",
-                        "surface": "#f8f9fa",
-                        "on-tertiary-fixed-variant": "#474647",
-                        "on-background": "#191c1d",
-                        "primary-fixed-dim": "#ffba20",
-                        "on-surface-variant": "#514532",
-                        "tertiary-fixed": "#e5e2e3",
-                        "outline-variant": "#d5c4ab",
-                        "on-tertiary-container": "#525152",
-                        "secondary-fixed": "#d7e2ff",
-                        "secondary-container": "#659dfe",
-                        "on-primary": "#ffffff",
-                        "on-primary-container": "#6b4c00",
-                        "on-tertiary-fixed": "#1b1b1c",
-                        "tertiary": "#5f5e5f",
-                        "surface-variant": "#e1e3e4",
-                        "surface-bright": "#f8f9fa",
-                        "secondary-fixed-dim": "#acc7ff",
-                        "on-primary-fixed-variant": "#5e4200",
-                        "on-secondary-container": "#003370",
-                        "primary-container": "#ffb800",
-                        "outline": "#837560",
-                        "primary": "#7c5800"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "container-max": "1280px",
-                        "stack-md": "16px",
-                        "margin-mobile": "16px",
-                        "stack-sm": "8px",
-                        "margin-desktop": "48px",
-                        "stack-lg": "32px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Be Vietnam Pro"],
-                        "title-md": ["Be Vietnam Pro"],
-                        "headline-xl": ["Be Vietnam Pro"],
-                        "headline-lg": ["Be Vietnam Pro"],
-                        "label-md": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "label-sm": ["Be Vietnam Pro"],
-                        "body-lg": ["Be Vietnam Pro"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
-                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
-                        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-                    }
-                },
-            },
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container": "#edeeef",
+          "inverse-surface": "#2e3132",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#d9dadb",
+          "surface-container-high": "#e7e8e9",
+          "secondary": "#115cb9",
+          "on-secondary-fixed-variant": "#004491",
+          "surface-container-low": "#f3f4f5",
+          "inverse-primary": "#ffba20",
+          "surface-tint": "#7c5800",
+          "on-secondary": "#ffffff",
+          "error-container": "#ffdad6",
+          "tertiary-fixed-dim": "#c8c6c7",
+          "tertiary-container": "#c6c4c5",
+          "on-surface": "#191c1d",
+          "inverse-on-surface": "#f0f1f2",
+          "primary-fixed": "#ffdea8",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "on-error-container": "#93000a",
+          "on-secondary-fixed": "#001a40",
+          "background": "#f8f9fa",
+          "surface-container-highest": "#e1e3e4",
+          "on-primary-fixed": "#271900",
+          "surface-container-lowest": "#ffffff",
+          "surface": "#f8f9fa",
+          "on-tertiary-fixed-variant": "#474647",
+          "on-background": "#191c1d",
+          "primary-fixed-dim": "#ffba20",
+          "on-surface-variant": "#514532",
+          "tertiary-fixed": "#e5e2e3",
+          "outline-variant": "#d5c4ab",
+          "on-tertiary-container": "#525152",
+          "secondary-fixed": "#d7e2ff",
+          "secondary-container": "#659dfe",
+          "on-primary": "#ffffff",
+          "on-primary-container": "#6b4c00",
+          "on-tertiary-fixed": "#1b1b1c",
+          "tertiary": "#5f5e5f",
+          "surface-variant": "#e1e3e4",
+          "surface-bright": "#f8f9fa",
+          "secondary-fixed-dim": "#acc7ff",
+          "on-primary-fixed-variant": "#5e4200",
+          "on-secondary-container": "#003370",
+          "primary-container": "#ffb800",
+          "outline": "#837560",
+          "primary": "#7c5800"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"
+        },
+        spacing: {
+          "gutter": "24px", "container-max": "1280px",
+          "stack-md": "16px", "margin-mobile": "16px",
+          "stack-sm": "8px", "margin-desktop": "48px", "stack-lg": "32px"
+        },
+        fontFamily: {
+          "headline-lg-mobile": ["Be Vietnam Pro"],
+          "title-md": ["Be Vietnam Pro"],
+          "headline-xl": ["Be Vietnam Pro"],
+          "headline-lg": ["Be Vietnam Pro"],
+          "label-md": ["Be Vietnam Pro"],
+          "body-md": ["Be Vietnam Pro"],
+          "label-sm": ["Be Vietnam Pro"],
+          "body-lg": ["Be Vietnam Pro"]
+        },
+        fontSize: {
+          "headline-lg-mobile": ["24px", {"lineHeight":"32px","fontWeight":"700"}],
+          "title-md": ["20px", {"lineHeight":"28px","fontWeight":"700"}],
+          "headline-xl": ["40px", {"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],
+          "headline-lg": ["32px", {"lineHeight":"40px","fontWeight":"700"}],
+          "label-md": ["14px", {"lineHeight":"20px","fontWeight":"600"}],
+          "body-md": ["16px", {"lineHeight":"24px","fontWeight":"400"}],
+          "label-sm": ["12px", {"lineHeight":"16px","fontWeight":"500"}],
+          "body-lg": ["18px", {"lineHeight":"28px","fontWeight":"400"}]
         }
-    </script>
+      }
+    }
+  }
+</script>
 <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar -->
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
 <!-- ===== VNB HEADER (shared) ===== -->
 <header id="vnb-header">
   <div id="vnb-topbar">
@@ -124,14 +122,14 @@
     </div>
   </div>
   <div id="vnb-navbar">
-    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <a id="vnb-logo" href="index.html">VNB<span>Sports</span></a>
     <ul id="vnb-navlinks">
-<li><a href="gioithieu.html" class="active">Giới thiệu</a></li>
-<li><a href="sanpham.html">Sản phẩm</a></li>
-<li><a href="daotao.html">Đào tạo</a></li>
-<li><a href="khuyenmai.html">Khuyến mãi</a></li>
-<li><a href="tintuc.html">Tin tức</a></li>
-<li><a href="tuyendung.html">Tuyển dụng</a></li>
+      <li><a href="gioithieu.html">Giới thiệu</a></li>
+      <li><a href="sanpham.html">Sản phẩm</a></li>
+      <li><a href="daotao.html">Đào tạo</a></li>
+      <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+      <li><a href="tintuc.html">Tin tức</a></li>
+      <li><a href="tuyendung.html">Tuyển dụng</a></li>
     </ul>
     <div id="vnb-actions">
       <div class="vnb-search-box">
@@ -151,166 +149,421 @@
     </div>
   </div>
   <nav id="vnb-mobile-menu">
-<a href="gioithieu.html" class="active">Giới thiệu</a>
-<a href="sanpham.html">Sản phẩm</a>
-<a href="daotao.html">Đào tạo</a>
-<a href="khuyenmai.html">Khuyến mãi</a>
-<a href="tintuc.html">Tin tức</a>
-<a href="tuyendung.html">Tuyển dụng</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="sanpham.html">Sản phẩm</a>
+    <a href="daotao.html">Đào tạo</a>
+    <a href="khuyenmai.html">Khuyến mãi</a>
+    <a href="tintuc.html">Tin tức</a>
+    <a href="tuyendung.html">Tuyển dụng</a>
   </nav>
 </header>
-<main class="">
-<!-- Hero Section -->
-<section class="relative h-[650px] flex items-center overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover scale-105" data-alt="A professional badminton athlete in action, lunging for a shuttlecock on a high-end indoor court. The lighting is cinematic and high-contrast, emphasizing the dynamic motion and technical precision. The color palette features bold yellow and deep blue accents against a modern, bright sports facility backdrop. The overall mood is energetic, inspiring, and focused on athletic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCMSfDWCTWLUUYPdC8n2CuUu_UjRB8MkkdlQf2lQmLMU9vhhWg0xB7ZBfWmhy3yS3lijEH_TiN5NzD08eJe4Vs-oIM3Nxh1-R4j5TH-7DkD1KNBNg9tudGHClIMwzsuSeC8D65BEsjkKgsgiaBDk2TTjD3ll6rNIbAt_I2JjnacaitqV71P1xEVtjF_r8_yU8JZjyWhhhWw0sltJPFT-uBCd0zlaum5nSIE_I9likAN0DnMbwwZvqKL7aJ8Bl8o-Y3X88zVPudCqE"/>
-<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
-<div class="relative max-w-container-max mx-auto px-margin-desktop w-full text-white">
-<div class="max-w-3xl">
-<span class="inline-block bg-primary text-on-primary px-4 py-1.5 rounded-full text-label-sm font-bold tracking-widest uppercase mb-6">Since 2012</span>
-<h1 class="font-headline-xl text-5xl md:text-6xl mb-stack-md leading-tight">Nâng tầm cầu lông Việt Nam bằng sự chuyên nghiệp</h1>
-<p class="font-body-lg text-lg md:text-xl text-white/80 max-w-xl border-l-4 border-primary pl-6">Hành trình hơn 10 năm xây dựng hệ sinh thái cầu lông hàng đầu, kết nối niềm đam mê và kiến tạo những giá trị bền vững cho cộng đồng.</p>
-</div>
-</div>
+
+<main>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="relative h-[80vh] min-h-[520px] w-full overflow-hidden flex items-center">
+  <img
+    alt="Vận động viên cầu lông chuyên nghiệp"
+    class="absolute inset-0 w-full h-full object-cover scale-105"
+    src="https://lh3.googleusercontent.com/aida/AP1WRLtKxo73h-P0sLWbxapMUkMgOe2CnEHFHx8OdL0NvvtcYUfOzeulaV5gw65cxjx0toMQJjTnUJLvmtm8qD74jWT2Jqf4r0TSpFUf84YVunS5VbAf7mICPRcc0gJ6Q23HWinMsvrqYahuD_8NhmvoPAE9YBcpYOi5baPHQEEKNuqVBaTBybLILo6UbMjoO4YvZDunC6ybSt9RjJ4C9eCei5IQaaqvtQBxWUZZxOjO8Q8mCDQHYMsdF2Qszls"
+  />
+  <div class="absolute inset-0 bg-black/45"></div>
+  <div class="absolute inset-0 hero-gradient"></div>
+
+  <div class="relative w-full max-w-container-max mx-auto px-margin-desktop z-10">
+    <div class="max-w-2xl">
+      <div class="inline-block bg-primary-container px-5 py-1.5 skew-tag mb-6">
+        <span class="font-label-md text-label-md text-on-primary-container skew-tag-inner tracking-widest uppercase">
+          Smash &amp; Drive Season
+        </span>
+      </div>
+      <h1 class="font-headline-xl text-[58px] md:text-[68px] leading-[1.05] text-white mb-6 drop-shadow-xl">
+        CHINH PHỤC<br/>MỌI ĐƯỜNG CẦU
+      </h1>
+      <p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-lg leading-relaxed">
+        VNB Sports cung cấp trang thiết bị cầu lông chuyên nghiệp, hỗ trợ tối đa kỹ thuật và nâng tầm đẳng cấp vận động viên của bạn.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="sanpham.html"
+           class="bg-primary-container text-on-primary-container px-8 py-4 font-title-md text-title-md hover:brightness-110 transition-all shadow-xl inline-flex items-center gap-2 group">
+          MUA SẮM NGAY
+          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        <a href="gioithieu.html"
+           class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 font-title-md text-title-md hover:bg-white/20 transition-all inline-flex items-center gap-2">
+          <span class="material-symbols-outlined">info</span>
+          VỀ VNB SPORTS
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats floating cards -->
+  <div class="absolute bottom-10 right-12 hidden lg:grid grid-cols-2 gap-4 z-10">
+    <div class="bg-white/8 backdrop-blur-lg border border-white/15 px-6 py-5 min-w-[150px] float-1">
+      <span class="block font-headline-lg text-headline-lg text-primary-container leading-none">50+</span>
+      <span class="block font-label-sm text-label-sm text-white/60 uppercase tracking-wider mt-1">Cửa hàng toàn quốc</span>
+    </div>
+    <div class="bg-white/8 backdrop-blur-lg border border-white/15 px-6 py-5 min-w-[150px] float-2">
+      <span class="block font-headline-lg text-headline-lg text-primary-container leading-none">100k+</span>
+      <span class="block font-label-sm text-label-sm text-white/60 uppercase tracking-wider mt-1">Vận động viên tin dùng</span>
+    </div>
+  </div>
 </section>
-<!-- Brand History & Mission -->
-<section class="max-w-container-max mx-auto px-margin-desktop py-24 bg-mesh">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="space-y-8">
-<div>
-<span class="text-primary font-bold text-label-md tracking-[0.2em] uppercase block mb-2">HÀNH TRÌNH PHÁT TRIỂN</span>
-<h2 class="font-headline-lg text-4xl md:text-5xl text-on-surface leading-tight">Từ niềm đam mê đến hệ thống <span class="text-primary underline decoration-primary/30 underline-offset-8">50+ cửa hàng</span></h2>
-</div>
-<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">VNB Sports bắt đầu từ khát vọng mang đến những trang thiết bị cầu lông chính hãng, chất lượng nhất cho người chơi tại Việt Nam. Không chỉ là một đơn vị bán lẻ, chúng tôi tự hào là người đồng hành cùng sự phát triển của phong trào cầu lông nước nhà thông qua các giải đấu và hoạt động cộng đồng.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-high transition-transform hover:-translate-y-1">
-<div class="font-headline-lg text-5xl text-primary mb-2">2012</div>
-<div class="font-label-md text-on-surface/60 uppercase tracking-wider">Thành lập cửa hàng đầu tiên</div>
-</div>
-<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-high transition-transform hover:-translate-y-1">
-<div class="font-headline-lg text-5xl text-primary mb-2">50+</div>
-<div class="font-label-md text-on-surface/60 uppercase tracking-wider">Chi nhánh trên toàn quốc</div>
-</div>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute -inset-4 bg-primary/10 rounded-[2rem] -rotate-2 transition-transform group-hover:rotate-0"></div>
-<div class="relative rounded-2xl overflow-hidden shadow-2xl h-[550px]">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior of a modern, premium badminton retail store showcasing neatly organized rackets on wall displays. The shop features clean architectural lines with bright white lighting and warm wooden accents. Professional sports equipment is presented with technical precision, reflecting a high-end corporate retail environment. The atmosphere is inviting and professional, designed for enthusiasts and professional athletes alike." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99NaBd-XAeIqodPVU-tU4slG3BQdaJxwuq5d5OUzLYtoHGJzwGxi15KYWaEhS232cseC3mH8wQ-aIwhs82j_A1ZslcNyWYEiXGueMiOmNeGraGGNWAtRvvKYZn1IyUN7ZScyhZwQ7N1408H-nJdCkvmD_p-jI37QUJ30udHlFqIftt_uOXlqjGIck_CvV18rnvciXOL4FQlPQImtTlu_AZXAJcKC1eAnT3QbQH4peVAlzdkhusr5m82gIpyxXzZAbhpkBjV753mY"/>
-</div>
-</div>
-</div>
+
+<!-- ===== DANH MỤC SẢN PHẨM (Bento Grid) ===== -->
+<section class="py-16 bg-surface">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-3">
+        <span class="w-10 h-1 bg-primary-container inline-block"></span>
+        DANH MỤC SẢN PHẨM
+      </h2>
+      <a href="sanpham.html" class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline">
+        XEM TẤT CẢ <span class="material-symbols-outlined">chevron_right</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+      <!-- Large: Vợt -->
+      <a href="sanpham.html" class="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-white border border-outline-variant block">
+        <img
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 aspect-[3/4] md:aspect-auto"
+          src="https://lh3.googleusercontent.com/aida/AP1WRLsheXdnmnFkbazLSvNhE4WjS5GONSepZ7vMRmPiZv3xDup9TI6tYvZdGfhlHJqSloTPIgBjHUcb96E7OQGkXu8Y_VJ3hpC2zc-dYwP5JbqRjqxMrd4OhiIz2Sr8I8iqtXGRX1s1FRAd9Yis5E3lODmH_rPfDFRPD5OxhoqMzfYTfoCaAv1UI_-Vntc4_bJ_KzJVYZfQePA5iL0UGgei63w2C67ewFbG43eURVlOjC82zipUqGqI8tzgfBg"
+          alt="Vợt cầu lông cao cấp"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8">
+          <h3 class="font-headline-lg text-headline-lg text-white mb-2">VỢT CẦU LÔNG</h3>
+          <p class="text-white/80 font-body-md mb-4 max-w-xs">Công nghệ Nano, khung chịu lực cao từ Yonex, Lining, Victor.</p>
+          <span class="bg-primary-container text-on-primary-container px-6 py-2 font-label-md text-label-md uppercase font-bold inline-block">Khám phá</span>
+        </div>
+      </a>
+
+      <!-- Giày -->
+      <a href="sanpham.html" class="md:col-span-2 md:row-span-1 group relative overflow-hidden bg-white border border-outline-variant block min-h-[200px]">
+        <img
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          src="https://lh3.googleusercontent.com/aida/AP1WRLs6nIxFkWWRVMSwhDZzwU5VT2Wr4HDfIeYscP4qBwEVjze_d4mLWKUyDLBVhyGOW7Kp8gDhdpyBUfb7da80PxNWr45MDvE7w7vMADZnLpRwYiWJuLEwqV28kjQOBXpuzehbeLS_MuEQnbQrw4nsFib0Ifeby1lWwrC6Y7K72MegomFyrKHpWYrk4gNE9qa3UxF5xUg7PmO7oaG2IFrxjkLws98fUziUr1BCDp1pNc881egwYfBylCSRXag"
+          alt="Giày cầu lông"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-5">
+          <h3 class="font-title-md text-title-md text-white">GIÀY CẦU LÔNG</h3>
+          <span class="text-primary-container font-label-md text-label-md mt-1 underline">MUA NGAY →</span>
+        </div>
+      </a>
+
+      <!-- Trang phục -->
+      <a href="sanpham.html" class="group relative overflow-hidden bg-white border border-outline-variant block min-h-[160px]">
+        <div class="absolute inset-0 bg-secondary/10 group-hover:bg-secondary/20 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-5 text-center">
+          <span class="material-symbols-outlined text-secondary text-5xl mb-3">apparel</span>
+          <h3 class="font-title-md text-title-md text-on-surface">TRANG PHỤC</h3>
+          <p class="text-on-surface-variant font-label-sm text-label-sm">Thoáng khí, co giãn 4 chiều</p>
+        </div>
+      </a>
+
+      <!-- Phụ kiện -->
+      <a href="sanpham.html" class="group relative overflow-hidden bg-white border border-outline-variant block min-h-[160px]">
+        <div class="absolute inset-0 bg-primary-container/10 group-hover:bg-primary-container/25 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-5 text-center">
+          <span class="material-symbols-outlined text-primary text-5xl mb-3">handyman</span>
+          <h3 class="font-title-md text-title-md text-on-surface">PHỤ KIỆN</h3>
+          <p class="text-on-surface-variant font-label-sm text-label-sm">Bao vợt, quấn cán, tất chân</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- Core Values: Modern Cards -->
-<section class="bg-on-surface text-white py-24 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
-<div class="max-w-container-max mx-auto px-margin-desktop relative">
-<div class="text-center mb-16">
-<span class="text-primary font-bold text-label-md tracking-widest uppercase block mb-3">Our DNA</span>
-<h2 class="font-headline-lg text-4xl mb-4">Giá trị cốt lõi của VNB</h2>
-<div class="w-20 h-1.5 bg-primary mx-auto"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Value 1 -->
-<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
-<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 rotate-3 group-hover:rotate-0 transition-transform">
-<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
-</div>
-<h3 class="font-title-md text-2xl mb-4 text-primary">Đam mê (Passion)</h3>
-<p class="font-body-md text-white/60 leading-relaxed">Chúng tôi làm việc bằng cả trái tim và tình yêu dành cho bộ môn cầu lông, lan tỏa năng lượng tích cực đến cộng đồng qua từng sản phẩm.</p>
-</div>
-<!-- Value 2 -->
-<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
-<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 -rotate-3 group-hover:rotate-0 transition-transform">
-<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-</div>
-<h3 class="font-title-md text-2xl mb-4 text-primary">Chất lượng (Quality)</h3>
-<p class="font-body-md text-white/60 leading-relaxed">Cam kết 100% sản phẩm chính hãng từ các thương hiệu hàng đầu thế giới. Chúng tôi nói không với hàng giả, hàng nhái.</p>
-</div>
-<!-- Value 3 -->
-<div class="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group">
-<div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-8 rotate-6 group-hover:rotate-0 transition-transform">
-<span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">business_center</span>
-</div>
-<h3 class="font-title-md text-2xl mb-4 text-primary">Chuyên nghiệp (Professionalism)</h3>
-<p class="font-body-md text-white/60 leading-relaxed">Quy trình đào tạo bài bản, dịch vụ tư vấn tận tâm và hệ thống bảo hành đồng bộ trên toàn quốc, mang lại an tâm tuyệt đối.</p>
-</div>
-</div>
-</div>
+
+<!-- ===== SẢN PHẨM BÁN CHẠY ===== -->
+<section class="py-16 bg-surface-container-lowest">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="text-center mb-12">
+      <h2 class="font-headline-lg text-headline-lg text-on-surface">SẢN PHẨM BÁN CHẠY</h2>
+      <p class="text-on-surface-variant font-body-md mt-2">Được hàng ngàn vận động viên tin dùng hàng tháng</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white border border-surface-variant p-4 group flex flex-col hover:border-primary-container hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-square mb-4 overflow-hidden bg-surface-container-low">
+          <img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Epr3g6n6rul_6Rv-piNlpReRfTyYjycwl4PqYU3yoCO9DgFPINR4gCS7q142OZi3FS0yzt_dABz5Ai8bE5eQbiEBEvuWy5KP2othM9SRWWpfM9EyahrOzwEz1pthjlyCtB0-aT68Gw_vRtyiQfKjoLGL9QSt4IhvOx05nyea0b1TpNx4THI30Tj7KUzbXJFx4Gm6RHFmu89uR5Wlsl2HNBoYDXgAZNOt4F1MMfuUwC4cLBtakYNY6ITqDx7Ulqvl4JTGvZubLAU"
+               alt="Yonex Astrox 100ZZ"/>
+          <span class="absolute top-2 left-2 bg-error text-white text-[10px] font-bold px-2 py-1 uppercase">HOT</span>
+        </div>
+        <span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Yonex</span>
+        <h3 class="font-title-md text-title-md text-on-surface mb-2 line-clamp-2 group-hover:text-primary transition-colors">Astrox 100ZZ Kurenai</h3>
+        <div class="mt-auto">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-secondary font-title-md text-title-md">4.150.000đ</span>
+            <span class="text-on-surface-variant font-label-sm text-label-sm line-through opacity-60">4.800.000đ</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="chitiet.html" class="flex-1 border border-primary text-primary py-2 font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors text-[12px]">CHI TIẾT</a>
+            <button class="flex-1 border-2 border-primary-container text-on-primary-container py-2 font-label-md text-label-md hover:bg-primary-container transition-colors text-[12px]">GIỎ HÀNG</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border border-surface-variant p-4 group flex flex-col hover:border-primary-container hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-square mb-4 overflow-hidden bg-surface-container-low">
+          <img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA08JrCHmeZ7gLGvdtVSes2gkHVx733C6zZ7I4uoPPJa8mVFR4z9EZjrtQi8mrhtloOZ03qCA34AJ3tkD-fB9WeRO7tdgM5A_T_X9-O1Cz-D63owxr0TwKDIneyMb7la2dSnZIvgTg0vnLDGbyesIuVqPINqsFny5BYyXr-ktwdfd6eePDYHhqSTFlJn-bD4j9ghvhOD4LwNDx_U6ZwKvVeTodwqV7MSP2Nly5eXxJv-FSnHVIXzPDOjssM4TiztQZNrTETxWC6I8"
+               alt="Victor P9200II Red"/>
+        </div>
+        <span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Victor</span>
+        <h3 class="font-title-md text-title-md text-on-surface mb-2 line-clamp-2 group-hover:text-primary transition-colors">Victor P9200II Red</h3>
+        <div class="mt-auto">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-secondary font-title-md text-title-md">2.450.000đ</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="chitiet.html" class="flex-1 border border-primary text-primary py-2 font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors text-[12px]">CHI TIẾT</a>
+            <button class="flex-1 border-2 border-primary-container text-on-primary-container py-2 font-label-md text-label-md hover:bg-primary-container transition-colors text-[12px]">GIỎ HÀNG</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border border-surface-variant p-4 group flex flex-col hover:border-primary-container hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-square mb-4 overflow-hidden bg-surface-container-low">
+          <img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5ILH7Yx46FpAVnYU3m2nHAJTe7sZJKUmFGGhXCT5bbiNnz4lebaIzw1YHOuj_pmL-gOVtnyAxb57z1MI9zQBV0wV0HVjzeP-CG0tk1L3iwXqDr1sJWheZ0mvfVKIx4701NCLExEK3jcuRqcuZ74SE0hxc6PGOCWrvo08RW90Ovj_gcVEVbBIb8ILauYzWJy_lY3SIjQsvNha1NX00pJ43WkumeOnajJXPmmZNT2atnvFDfzVQalfLtdcLbsZRy0FRCDUHNAivSA"
+               alt="Cầu Lining G800"/>
+        </div>
+        <span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Lining</span>
+        <h3 class="font-title-md text-title-md text-on-surface mb-2 line-clamp-2 group-hover:text-primary transition-colors">Ống cầu Lining G800</h3>
+        <div class="mt-auto">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-secondary font-title-md text-title-md">385.000đ</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="chitiet.html" class="flex-1 border border-primary text-primary py-2 font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors text-[12px]">CHI TIẾT</a>
+            <button class="flex-1 border-2 border-primary-container text-on-primary-container py-2 font-label-md text-label-md hover:bg-primary-container transition-colors text-[12px]">GIỎ HÀNG</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border border-surface-variant p-4 group flex flex-col hover:border-primary-container hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-square mb-4 overflow-hidden bg-surface-container-low">
+          <img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdPEF3JKEavtpv3ATWq128Fm1ONMrb6ToGQvdphDwzWvRL2ZLsVjRu33rc5VqkyN3cXBE_kYpXtCt-5gHkjy_ufUXHJ55KfLsYVsGuRNsab4slQE3FGwEm8l1gdZT0Q9WJI-QZTULsEcU7vQBF8FtlHYC06Vb2YBE-xu7LZrjcmDjK77F0CWmYJFWy6i3MDVFtfhjWz7GSzCBwuW8Kl-dzuA0-JoZo6TQf2bchXL5X4sAGuc23eWeP7bqXo9cT2KV2DHmU9eTYq6Q"
+               alt="Bao vợt Yonex"/>
+        </div>
+        <span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Yonex</span>
+        <h3 class="font-title-md text-title-md text-on-surface mb-2 line-clamp-2 group-hover:text-primary transition-colors">Bao vợt Yonex BA92231W</h3>
+        <div class="mt-auto">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-secondary font-title-md text-title-md">1.950.000đ</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="chitiet.html" class="flex-1 border border-primary text-primary py-2 font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors text-[12px]">CHI TIẾT</a>
+            <button class="flex-1 border-2 border-primary-container text-on-primary-container py-2 font-label-md text-label-md hover:bg-primary-container transition-colors text-[12px]">GIỎ HÀNG</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-10">
+      <a href="sanpham.html"
+         class="inline-flex items-center gap-2 border-2 border-primary text-primary px-10 py-3.5 font-label-md text-label-md font-bold hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest group">
+        XEM TẤT CẢ SẢN PHẨM
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- Nationwide Coverage Map -->
-<section class="max-w-container-max mx-auto px-margin-desktop py-24">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-5 space-y-8">
-<div>
-<span class="text-primary font-bold text-label-md tracking-widest uppercase block mb-3">Mạng lưới VNB</span>
-<h2 class="font-headline-lg text-4xl leading-tight text-on-surface">Phủ sóng rộng khắp<br/>khắp mọi miền Tổ quốc</h2>
-</div>
-<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">Với hơn 50 chi nhánh từ Bắc vào Nam, VNB Sports luôn có mặt bất cứ nơi nào bạn cần trang thiết bị cầu lông chuyên nghiệp và dịch vụ căng vợt tiêu chuẩn quốc tế.</p>
-<div class="space-y-4">
-<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-<div>
-<h4 class="font-bold text-on-surface">TP. Hồ Chí Minh</h4>
-<p class="text-sm text-on-surface-variant">20+ Cửa hàng chính hãng</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-<div>
-<h4 class="font-bold text-on-surface">Hà Nội</h4>
-<p class="text-sm text-on-surface-variant">10+ Cửa hàng chính hãng</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-surface-container-high transition-colors hover:border-primary/30">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-<div>
-<h4 class="font-bold text-on-surface">Các tỉnh thành khác</h4>
-<p class="text-sm text-on-surface-variant">Đà Nẵng, Cần Thơ, Hải Phòng...</p>
-</div>
-</div>
-</div>
-<button class="w-full sm:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-bold shadow-lg shadow-primary/20 hover:bg-surface-tint hover:-translate-y-1 transition-all uppercase tracking-widest text-sm flex items-center justify-center gap-3 group">
-                        Tìm cửa hàng gần bạn
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-</div>
-<div class="lg:col-span-7 relative rounded-3xl border border-surface-container-high overflow-hidden h-[600px] shadow-inner bg-white">
-<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="A stylized map representation of Vietnam with multiple glowing location markers scattered across the major cities from north to south. The aesthetic is clean, modern, and data-driven, using a light gray background with subtle grid lines. The lighting is soft and corporate, emphasizing the vast network and accessibility of the brand across the entire country." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ZDO-5k9C8Wt0YL8CatvAlARM3rRDQ1wAt0nTZ9v_ZTpcJNGWqc_2WqIjo5LytjcqKSq6_f5edkWQXybUPn9XFctTnjBnojAUsA-p918qYc31kj1JjTfiVATqYvxqca37QX-4w3TsfQHtKhDwFHioRRF2XN_Axh9ILhGaJhb8rrm-itlSEyXR2DZgVD3vGr7W2NQWe8-yd6fUT3BYYuEo2bPEdZhzHM15yUekKvQhe3-KlNwq-_eYO3QjfK8bhcV9irc41724T9A"/>
-<div class="absolute inset-0 map-gradient pointer-events-none"></div>
-<!-- Pulsing Markers -->
-<div class="absolute top-[18%] left-[48%] group cursor-pointer">
-<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
-<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
-<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB Hà Nội</div>
-</div>
-<div class="absolute top-[82%] left-[55%] group cursor-pointer">
-<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
-<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
-<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB TP. Hồ Chí Minh</div>
-</div>
-<div class="absolute top-[52%] left-[58%] group cursor-pointer">
-<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
-<span class="material-symbols-outlined text-primary text-4xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
-<div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-on-surface text-white p-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">VNB Đà Nẵng</div>
-</div>
-</div>
-</div>
+
+<!-- ===== VNB ACADEMY (Training Promo) ===== -->
+<section class="py-16 bg-on-surface relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+    <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container via-transparent to-transparent"></div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
+    <div class="order-2 lg:order-1">
+      <div class="relative p-gutter">
+        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary-container pointer-events-none"></div>
+        <img class="w-full aspect-[4/3] object-cover shadow-2xl"
+             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPwRvKB6p0CTSXge7IbWbveGdTH1wnHswvGhruDShnjXMMpRxXxFualAy2ey9pz7umFFaImTPBhZXKAswWx8qj3mFv6k8Oj5a9Ht01YzIshtIVfSDQebwDTs-0As-mZ7EDrw2JEMalRBuGchV1YosZCdXr-frXuLWU_rJGrFXN-oHds2sbM6tiujBujewhFM65C_Pv3Bl0j3K7aSDGfWybWNHgNJAav1d6YO64IF5Yu4lOGxWyP8Rpa61Y7MQY6DLzVTIWG2mPHjg"
+             alt="Huấn luyện cầu lông VNB Academy"/>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2 text-white">
+      <span class="font-label-md text-label-md text-primary-container tracking-widest uppercase mb-4 block">VNB ACADEMY</span>
+      <h2 class="font-headline-xl text-headline-xl mb-stack-md leading-tight">NÂNG TẦM KỸ NĂNG<br/>CÙNG CHUYÊN GIA</h2>
+      <p class="text-surface-variant font-body-lg mb-8">Hệ thống khóa học từ cơ bản đến nâng cao cho mọi lứa tuổi. Giáo trình chuẩn quốc tế, cơ sở vật chất hiện đại hàng đầu Việt Nam.</p>
+      <ul class="space-y-4 mb-stack-lg">
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary-container">check_circle</span>
+          <span class="font-body-md text-body-md">Huấn luyện viên chuẩn quốc gia</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary-container">check_circle</span>
+          <span class="font-body-md text-body-md">Sân bãi chuẩn thi đấu quốc tế</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary-container">check_circle</span>
+          <span class="font-body-md text-body-md">Tặng ngay bộ quà tặng khi đăng ký</span>
+        </li>
+      </ul>
+      <a href="daotao.html"
+         class="bg-primary-container text-on-primary-container px-10 py-4 font-title-md text-title-md hover:brightness-110 transition-all inline-flex items-center gap-2 group">
+        ĐĂNG KÝ TƯ VẤN
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </section>
+
+<!-- ===== KHUYẾN MÃI NỔI BẬT ===== -->
+<section class="py-16 bg-surface-container-low">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-3">
+        <span class="w-10 h-1 bg-primary-container inline-block"></span>
+        KHUYẾN MÃI NỔI BẬT
+      </h2>
+      <a href="khuyenmai.html" class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline">
+        XEM TẤT CẢ <span class="material-symbols-outlined">chevron_right</span>
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gradient-to-br from-primary to-surface-tint text-white p-8 flex flex-col justify-between min-h-[200px] group hover:-translate-y-1 transition-transform">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest opacity-70">Ưu đãi đặc biệt</span>
+          <h3 class="font-headline-lg text-headline-lg mt-2 leading-tight">Giảm đến<br/><span class="text-primary-container text-5xl">30%</span></h3>
+          <p class="font-body-md text-body-md mt-2 opacity-80">Vợt Yonex, Victor, Lining hàng chính hãng</p>
+        </div>
+        <a href="khuyenmai.html" class="mt-6 inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 px-5 py-2.5 font-label-md text-label-md transition-colors group-hover:gap-3">
+          XEM NGAY <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-secondary text-white p-8 flex flex-col justify-between min-h-[200px] group hover:-translate-y-1 transition-transform">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest opacity-70">Miễn phí vận chuyển</span>
+          <h3 class="font-headline-lg text-headline-lg mt-2 leading-tight">Đơn hàng<br/><span class="text-primary-container text-4xl">500k+</span></h3>
+          <p class="font-body-md text-body-md mt-2 opacity-80">Giao hàng toàn quốc, 50+ tỉnh thành</p>
+        </div>
+        <a href="khuyenmai.html" class="mt-6 inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 px-5 py-2.5 font-label-md text-label-md transition-colors">
+          MUA NGAY <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-on-surface text-white p-8 flex flex-col justify-between min-h-[200px] group hover:-translate-y-1 transition-transform">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest opacity-70">Thành viên VNB</span>
+          <h3 class="font-headline-lg text-headline-lg mt-2 leading-tight">Tích điểm<br/><span class="text-primary-container text-4xl">×2</span></h3>
+          <p class="font-body-md text-body-md mt-2 opacity-80">Đăng ký tài khoản nhận ngay ưu đãi</p>
+        </div>
+        <a href="hoso.html" class="mt-6 inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-5 py-2.5 font-label-md text-label-md transition-colors">
+          ĐĂNG KÝ <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KIẾN THỨC CẦU LÔNG ===== -->
+<section class="py-16 bg-surface">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">KIẾN THỨC CẦU LÔNG</h2>
+        <p class="text-on-surface-variant font-body-md mt-1">Cập nhật tin tức, kỹ thuật và bí quyết từ các cao thủ</p>
+      </div>
+      <a href="tintuc.html" class="hidden md:flex items-center gap-2 font-label-md text-label-md text-on-surface hover:text-primary transition-colors">
+        XEM TẤT CẢ <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <a href="tintuc.html" class="bg-white border border-outline-variant group block hover:shadow-md transition-shadow">
+        <div class="relative aspect-video overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQz5X4c9B2NtJXQmT35YQM5BjkZknnruWXDMM17Wz6cCqW9T5c044p2KAXUXVWExc2dhhJAhGcukyyXP-edByflKuNz_yGZ46SD67ZcjOPOd95v0DNIOngL0dWfuxqGJbsnnvpwHjkNTuDT2xsRziRjFDxXz1z5B7RFOGisNNzPSzRnLy9mO7gO4YRIpB4nycUwbDlFK0iw-OBUbFFKUWjWqtN8sZV8CTDFVlXLyPjRf5YtvjLWzAZf5J_cQ9-pxRySg8FSHQ7rnY"
+               alt="Độ căng vợt cầu lông"/>
+        </div>
+        <div class="p-5">
+          <div class="flex gap-4 mb-3">
+            <span class="bg-surface-container-high px-2 py-1 font-label-sm text-label-sm text-on-surface-variant uppercase">KỸ THUẬT</span>
+            <span class="text-on-surface-variant font-label-sm text-label-sm">15 Tháng 10, 2024</span>
+          </div>
+          <h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors">Cách chọn độ căng vợt phù hợp với lối chơi</h3>
+          <p class="text-on-surface-variant font-body-md line-clamp-2">Độ căng mặt vợt ảnh hưởng trực tiếp đến lực đẩy và khả năng kiểm soát cầu của bạn.</p>
+        </div>
+      </a>
+
+      <a href="tintuc.html" class="bg-white border border-outline-variant group block hover:shadow-md transition-shadow">
+        <div class="relative aspect-video overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKzYtx96tPyDuB2tYHi_utqSsOUyzuVhOMizldoJCPOH29sgfhyq41mkdlZpzpb6_ww6oMD9cxBcey6GkNE5ghmriWMpyS85CUdbu6K-ZLeeo_Uw6KjiYqJBguFGWCfqqZ3A4DNFvQmDSeXpqzvjNdS66jUpvjoT9RJHGiqE4uMo9nNWHHM_VcAA89SavUU5oRBWVvHZMz6rcW8adIWBnZnKQjdU3fbyuuCltDgCQbkpK7TxIhbHppE6h2AODGh2YnFIUi5CX3-E"
+               alt="Giày cầu lông 2024"/>
+        </div>
+        <div class="p-5">
+          <div class="flex gap-4 mb-3">
+            <span class="bg-surface-container-high px-2 py-1 font-label-sm text-label-sm text-on-surface-variant uppercase">TƯ VẤN</span>
+            <span class="text-on-surface-variant font-label-sm text-label-sm">12 Tháng 10, 2024</span>
+          </div>
+          <h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors">Top 5 đôi giày cầu lông đáng mua nhất 2024</h3>
+          <p class="text-on-surface-variant font-body-md line-clamp-2">Lựa chọn một đôi giày tốt sẽ giúp bạn di chuyển linh hoạt và hạn chế tối đa chấn thương.</p>
+        </div>
+      </a>
+
+      <a href="tintuc.html" class="bg-white border border-outline-variant group block hover:shadow-md transition-shadow">
+        <div class="relative aspect-video overflow-hidden">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC383x-smpi8mrK-HdkRQ4wXRdYCXlue6HPlg2AK11y5tjcHznK_Emwxs0TJ25ZfvgVIm7B17o72wlUXEjwllc9b7cDbE6lJ_WF7bDijcQNBm-bX93xbwU5LaP0HPtfke5I3uK712OaAfzgdvg53W9WhLUUfHE5wgJmKNuBfUH3b_g46P18r3yKYc4VKl-MvtuEi7iC0U-pNLaYL_Kvtaz8mFRv2sSH4ZcKlrOtnOVB3XLa2FDFUcgNuL5oIrFDvgutAdFOiSdtg-M"
+               alt="Bài tập smash cầu lông"/>
+        </div>
+        <div class="p-5">
+          <div class="flex gap-4 mb-3">
+            <span class="bg-surface-container-high px-2 py-1 font-label-sm text-label-sm text-on-surface-variant uppercase">LUYỆN TẬP</span>
+            <span class="text-on-surface-variant font-label-sm text-label-sm">10 Tháng 10, 2024</span>
+          </div>
+          <h3 class="font-title-md text-title-md text-on-surface mb-2 group-hover:text-primary transition-colors">3 bài tập bổ trợ giúp tăng lực smash cực nhanh</h3>
+          <p class="text-on-surface-variant font-body-md line-clamp-2">Làm thế nào để có những cú đập cầu "cháy sân"? Hãy cùng chuyên gia VNB tìm hiểu ngay.</p>
+        </div>
+      </a>
+
+    </div>
+    <div class="text-center mt-8 md:hidden">
+      <a href="tintuc.html" class="text-secondary font-label-md text-label-md flex items-center justify-center gap-1">
+        XEM TẤT CẢ BÀI VIẾT <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="bg-primary-container py-12">
+  <div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-stack-lg">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-4xl text-on-primary-container">alternate_email</span>
+      <div>
+        <h4 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary-container">ĐĂNG KÝ NHẬN ƯU ĐÃI</h4>
+        <p class="text-on-primary-container opacity-80 font-label-md text-label-md">Đừng bỏ lỡ các chương trình khuyến mãi hấp dẫn nhất</p>
+      </div>
+    </div>
+    <div class="flex w-full md:w-auto">
+      <input type="email" placeholder="Nhập email của bạn"
+             class="flex-grow md:w-80 px-4 py-3 border-none focus:ring-0 text-on-surface font-body-md"/>
+      <button class="bg-on-surface text-primary-container px-6 py-3 font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">ĐĂNG KÝ</button>
+    </div>
+  </div>
+</section>
+
 </main>
-<!-- Footer -->
+
 <!-- ===== VNB FOOTER (shared) ===== -->
 <footer id="vnb-footer">
   <div class="vnb-footer-inner">
     <div class="vnb-footer-grid">
-      <!-- Brand -->
       <div class="vnb-footer-brand">
-        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <a class="vnb-footer-logo" href="index.html">VNB Sports</a>
         <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
         <div class="vnb-footer-socials">
           <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
@@ -318,7 +571,6 @@
           <a href="#" title="Website"><span class="material-symbols-outlined">public</span></a>
         </div>
       </div>
-      <!-- Sản phẩm -->
       <div class="vnb-footer-col">
         <h4>Sản phẩm</h4>
         <ul>
@@ -328,7 +580,6 @@
           <li><a href="sanpham.html"><span class="dot"></span>Thời trang thể thao</a></li>
         </ul>
       </div>
-      <!-- Khách hàng -->
       <div class="vnb-footer-col">
         <h4>Khách hàng</h4>
         <ul>
@@ -338,7 +589,6 @@
           <li><a href="tuyendung.html"><span class="dot"></span>Tuyển dụng</a></li>
         </ul>
       </div>
-      <!-- Liên hệ -->
       <div class="vnb-footer-col vnb-footer-contact">
         <h4>Liên hệ</h4>
         <ul>
@@ -367,54 +617,27 @@
     </div>
   </div>
 </footer>
+
+<!-- FAB Chat / Call -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
+  <a href="#" class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" title="Chat hỗ trợ">
+    <span class="material-symbols-outlined">chat_bubble</span>
+  </a>
+  <a href="tel:19006336333" class="w-14 h-14 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" title="Gọi ngay">
+    <span class="material-symbols-outlined">call</span>
+  </a>
+</div>
+
+<!-- ===== SHARED VNB JS ===== -->
 <script>
-        // Reveal animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-1');
-                header.classList.remove('shadow-none');
-            } else {
-                header.classList.remove('py-1');
-            }
-        });
-    </script>
-<script>
-// === VNB Shared JS ===
 (function(){
-  // Hamburger toggle
+  // Hamburger
   var btn = document.getElementById('vnb-ham-btn');
   var menu = document.getElementById('vnb-mobile-menu');
-  if(btn && menu){
-    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
-  }
+  if(btn && menu){ btn.addEventListener('click', function(){ menu.classList.toggle('open'); }); }
   // Sticky shrink
   var hdr = document.getElementById('vnb-header');
-  if(hdr){
-    window.addEventListener('scroll', function(){
-      hdr.classList.toggle('scrolled', window.scrollY > 40);
-    });
-  }
+  if(hdr){ window.addEventListener('scroll', function(){ hdr.classList.toggle('scrolled', window.scrollY > 40); }); }
   // Scroll reveal
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
@@ -425,5 +648,27 @@
   });
 })();
 </script>
-<script src="cart.js"></script>
-</body></html>
+
+<!-- ===== PAGE TRANSITION ===== -->
+<div id="vnb-page-overlay"></div>
+<script>
+(function(){
+  document.documentElement.classList.add('vnb-ready');
+  var overlay = document.getElementById('vnb-page-overlay');
+  function navigate(href){ overlay.classList.add('leaving'); setTimeout(function(){ window.location.href = href; }, 270); }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || a.target==='_blank') return;
+    e.preventDefault();
+    navigate(href);
+  }, true);
+  // Back home btn hidden on homepage
+  var backBtn = document.getElementById('vnb-back-home');
+  if(backBtn) backBtn.style.display = 'none';
+})();
+</script>
+
+</body>
+</html>

@@ -126,7 +126,7 @@
     </div>
   </div>
   <div id="vnb-navbar">
-    <a id="vnb-logo" href="gioithieu.html">VNB<span>Sports</span></a>
+    <a id="vnb-logo" href="index.html">VNB<span>Sports</span></a>
     <ul id="vnb-navlinks">
 <li><a href="gioithieu.html">Giới thiệu</a></li>
 <li><a href="sanpham.html">Sản phẩm</a></li>
@@ -165,7 +165,7 @@
 <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg min-h-[716px]">
 <!-- Breadcrumbs -->
 <nav class="mb-stack-lg flex items-center gap-2 text-label-sm text-on-surface-variant">
-  <a class="hover:text-primary transition-colors" href="gioithieu.html">Trang chủ</a>
+  <a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a>
   <span class="material-symbols-outlined text-[14px]">chevron_right</span>
   <a class="hover:text-primary transition-colors" href="sanpham.html">Sản phẩm</a>
   <span class="material-symbols-outlined text-[14px]">chevron_right</span>
@@ -200,7 +200,7 @@
     <div class="vnb-footer-grid">
       <!-- Brand -->
       <div class="vnb-footer-brand">
-        <a class="vnb-footer-logo" href="gioithieu.html">VNB Sports</a>
+        <a class="vnb-footer-logo" href="index.html">VNB Sports</a>
         <p>Chuỗi hệ thống cửa hàng cầu lông hàng đầu Việt Nam. Cam kết sản phẩm chính hãng 100% và dịch vụ chuyên nghiệp.</p>
         <div class="vnb-footer-socials">
           <a href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
@@ -259,11 +259,11 @@
 </footer>
 <!-- Mobile Navigation Shell (Suppressed on Desktop) -->
 <div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.05)] grid grid-cols-4 py-2 px-4 z-50">
-<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="index.html">
 <span class="material-symbols-outlined">home</span>
 <span class="text-[10px] font-bold">Trang chủ</span>
 </a>
-<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="sanpham.html">
 <span class="material-symbols-outlined">category</span>
 <span class="text-[10px] font-bold">Danh mục</span>
 </a>
@@ -274,7 +274,7 @@
 </div>
 <span class="text-[10px] font-bold">Giỏ hàng</span>
 </a>
-<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="hoso.html">
 <span class="material-symbols-outlined">person</span>
 <span class="text-[10px] font-bold">Tài khoản</span>
 </a>
@@ -321,4 +321,42 @@
 })();
 </script>
 <script src="cart.js"></script>
+<a id="vnb-back-home" href="index.html" title="Về trang chủ">
+  <span class="material-symbols-outlined">home</span>
+  Trang chủ
+</a>
+
+<div id="vnb-page-overlay"></div>
+<script>
+(function(){
+  // Fade in on load
+  document.documentElement.classList.add('vnb-ready');
+
+  var overlay = document.getElementById('vnb-page-overlay');
+
+  function navigate(href) {
+    overlay.classList.add('leaving');
+    setTimeout(function(){ window.location.href = href; }, 270);
+  }
+
+  // Intercept all local links
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || a.target === '_blank') return;
+    e.preventDefault();
+    navigate(href);
+  }, true);
+
+  // Back button – show on non-home pages
+  var backBtn = document.getElementById('vnb-back-home');
+  if (backBtn) {
+    var current = window.location.pathname.replace(/\/$/, '').split('/').pop() || '';
+    if (current !== 'index.html' && current !== '') {
+      backBtn.style.display = 'flex';
+    }
+  }
+})();
+</script>
 </body></html>
